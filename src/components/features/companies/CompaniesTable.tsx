@@ -1,18 +1,8 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { 
-  Table, 
-  TableBody, 
-  TableCell, 
-  TableHead, 
-  TableHeader, 
-  TableRow 
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { ArrowDown, ArrowUp, ImageOff } from 'lucide-react';
-import { formatCurrency } from '@/utils/formatters';
+import { ArrowDown, ArrowUp } from 'lucide-react';
 import { Company } from '@/types/company';
 
 interface CompaniesTableProps {
@@ -42,14 +32,6 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
     return 0;
   });
 
-  const SortIndicator = ({ columnKey }: { columnKey: keyof Company }) => {
-    if (columnKey !== sortKey) return null;
-    
-    return sortDirection === 'asc' 
-      ? <ArrowUp className="ml-1 h-4 w-4 inline" /> 
-      : <ArrowDown className="ml-1 h-4 w-4 inline" />;
-  };
-
   // Get initials from company name for the avatar fallback
   const getInitials = (name: string): string => {
     return name
@@ -65,85 +47,47 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
   };
   
   return (
-    <div className="border rounded-md">
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead 
-              className="cursor-pointer"
-              onClick={() => onSort('name')}
-            >
-              {t('companies.table.name')}
-              <SortIndicator columnKey="name" />
-            </TableHead>
-            <TableHead 
-              className="cursor-pointer"
-              onClick={() => onSort('sector')}
-            >
-              {t('companies.table.sector')}
-              <SortIndicator columnKey="sector" />
-            </TableHead>
-            <TableHead 
-              className="cursor-pointer"
-              onClick={() => onSort('country')}
-            >
-              {t('companies.table.country')}
-              <SortIndicator columnKey="country" />
-            </TableHead>
-            <TableHead>
-              {t('companies.table.latestValuation')}
-            </TableHead>
-            <TableHead className="text-center">
-              {t('companies.table.valuations')}
-            </TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {sortedCompanies.map((company) => (
-            <TableRow 
-              key={company.id} 
-              className="cursor-pointer hover:bg-muted/50"
-              onClick={() => onRowClick(company.id)}
-            >
-              <TableCell className="font-medium">
-                <div className="flex items-center gap-3">
-                  <Avatar className="h-10 w-10 bg-background border">
-                    {company.logoUrl ? (
-                      <AvatarImage 
-                        src={company.logoUrl} 
-                        alt={company.name} 
-                        onError={handleImageError}
-                        className="object-contain p-1"
-                      />
-                    ) : (
-                      <AvatarFallback className="text-xs">
-                        {getInitials(company.name)}
-                      </AvatarFallback>
-                    )}
-                  </Avatar>
-                  <span>{company.name}</span>
-                </div>
-              </TableCell>
-              <TableCell>{company.sector}</TableCell>
-              <TableCell>{company.country}</TableCell>
-              <TableCell>
-                {company.latestValuation ? (
-                  <span className="text-primary">
-                    {formatCurrency(company.latestValuation.value)}
-                  </span>
+    <div className="flex flex-col space-y-1">
+      <div className="flex items-center justify-between px-4 py-2">
+        <h2 className="text-xl font-medium text-gray-500 flex items-center gap-1">
+          {t('companies.title')} 
+          <button onClick={() => onSort('name')} className="ml-1 focus:outline-none">
+            {sortDirection === 'asc' 
+              ? <ArrowDown className="h-4 w-4 inline" /> 
+              : <ArrowUp className="h-4 w-4 inline" />}
+          </button>
+        </h2>
+      </div>
+      
+      {sortedCompanies.map((company) => (
+        <div 
+          key={company.id}
+          onClick={() => onRowClick(company.id)}
+          className="flex items-center p-4 border-b cursor-pointer hover:bg-gray-50"
+        >
+          <div className="flex items-center gap-4 w-full">
+            <div className="flex-shrink-0">
+              <Avatar className="h-16 w-16 bg-background border rounded-md">
+                {company.logoUrl ? (
+                  <AvatarImage 
+                    src={company.logoUrl} 
+                    alt={company.name} 
+                    onError={handleImageError}
+                    className="object-contain p-1"
+                  />
                 ) : (
-                  <Badge variant="outline" className="bg-muted">
-                    {t('companies.table.noValuation')}
-                  </Badge>
+                  <AvatarFallback className="text-sm rounded-md">
+                    {getInitials(company.name)}
+                  </AvatarFallback>
                 )}
-              </TableCell>
-              <TableCell className="text-center">
-                <Badge>{company.valuationsCount || 0}</Badge>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+              </Avatar>
+            </div>
+            <div>
+              <h3 className="text-lg font-medium">{company.name}</h3>
+            </div>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
