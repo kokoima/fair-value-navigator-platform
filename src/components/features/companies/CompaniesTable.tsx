@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { 
@@ -92,9 +93,6 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
             <TableHead>
               {t('companies.table.latestValuation')}
             </TableHead>
-            <TableHead className="text-center">
-              {t('companies.table.valuations')}
-            </TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -140,9 +138,6 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
                     {t('companies.table.noValuation')}
                   </Badge>
                 )}
-              </TableCell>
-              <TableCell className="text-center">
-                <Badge>{company.valuationsCount || 0}</Badge>
               </TableCell>
             </TableRow>
           ))}
