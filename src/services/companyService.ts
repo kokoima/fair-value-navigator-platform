@@ -99,7 +99,19 @@ export const fetchCompanyById = async (id: string): Promise<Company> => {
 };
 
 // Create a new company
-export const createCompany = async (companyData: Omit<Company, 'id' | 'valuationsCount' | 'latestValuation'>): Promise<Company> => {
+// Define the required parameters more explicitly based on the Company type
+export const createCompany = async (companyData: {
+  name: string;  // Make name explicitly required
+  sector: string;  // Make sector explicitly required
+  subsector: string;  // Make subsector explicitly required
+  country: string;  // Make country explicitly required
+  tradingName?: string;
+  foundedYear?: number;
+  registrationId?: string;
+  website?: string;
+  description?: string;
+  logoUrl?: string;
+}): Promise<Company> => {
   await delay(1000); // Simulate API delay
   
   const newCompany: Company = {
