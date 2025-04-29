@@ -107,7 +107,7 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
             >
               <TableCell className="font-medium">
                 <div className="flex items-center gap-4">
-                  <Avatar className="h-12 w-12 rounded-md bg-background border">
+                  <Avatar className="h-14 w-14 rounded-md bg-white border">
                     {company.logoUrl ? (
                       <AvatarImage 
                         src={company.logoUrl} 

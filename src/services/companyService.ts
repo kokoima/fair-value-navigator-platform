@@ -15,7 +15,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US12345',
     website: 'https://logoipsum-network.example.com',
     description: 'Empresa de tecnología especializada en software de gestión empresarial.',
-    logoUrl: '/lovable-uploads/8a4e671e-1f44-4551-aac3-eb8469ce78cc.png',
+    logoUrl: '/lovable-uploads/ec235582-a1c8-46c1-8f9d-c74e759887df.png',
     valuationsCount: 3,
     latestValuation: {
       id: 'val1',
@@ -34,7 +34,7 @@ const mockCompanies: Company[] = [
     registrationId: 'ES67890',
     website: 'https://logoipsum-lion.example.com',
     description: 'Compañía de seguros con operaciones en toda Europa.',
-    logoUrl: '/lovable-uploads/b1fa8946-eb87-427f-a976-bf31b490c44c.png',
+    logoUrl: '/lovable-uploads/3e5921d0-7d01-46ac-a02d-9927d81f0590.png',
     valuationsCount: 2,
     latestValuation: {
       id: 'val2',
@@ -53,7 +53,7 @@ const mockCompanies: Company[] = [
     registrationId: 'UK54321',
     website: 'https://logoipsum-university.example.com',
     description: 'Institución educativa de renombre internacional.',
-    logoUrl: '/lovable-uploads/0b0d68ee-88f5-4e23-b504-50dfa7dbad46.png',
+    logoUrl: '/lovable-uploads/532a33d3-0a0b-4fa7-bd49-62ef1f9b39e2.png',
     valuationsCount: 0,
     latestValuation: undefined
   },
@@ -68,7 +68,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US98765',
     website: 'https://logoipsum-foundation.example.com',
     description: 'Fundación dedicada a causas humanitarias y desarrollo sostenible.',
-    logoUrl: '/lovable-uploads/594807a2-886f-4134-8483-c4a828897b41.png',
+    logoUrl: '/lovable-uploads/5b72bcab-f0b7-4bc0-b3fb-51280583b669.png',
     valuationsCount: 5,
     latestValuation: {
       id: 'val3',
@@ -87,7 +87,7 @@ const mockCompanies: Company[] = [
     registrationId: 'JP24680',
     website: 'https://logoipsum-tech.example.com',
     description: 'Empresa líder en electrónica de consumo e innovación tecnológica.',
-    logoUrl: '/lovable-uploads/6611417e-f9d5-4118-a6b5-032f3f831893.png',
+    logoUrl: '/lovable-uploads/068eda03-7367-4ea1-9e0a-f8b0c86c849b.png',
     valuationsCount: 1,
     latestValuation: {
       id: 'val4',
@@ -106,7 +106,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US45678',
     website: 'https://logoipsum-cloud.example.com',
     description: 'Proveedor de servicios en la nube y soluciones de almacenamiento digital.',
-    logoUrl: '/lovable-uploads/bb3edb72-975d-4470-a01f-e753bd1512ec.png',
+    logoUrl: '/lovable-uploads/f2cd45e1-7149-4fb4-9852-07ac64d2be6f.png',
     valuationsCount: 8,
     latestValuation: {
       id: 'val5',
@@ -125,7 +125,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US78901',
     website: 'https://logoipsum-finance.example.com',
     description: 'Institución financiera especializada en servicios bancarios innovadores.',
-    logoUrl: '/lovable-uploads/28296eb7-d75f-4638-8c8f-35066b95c4bc.png',
+    logoUrl: '/lovable-uploads/9b692a63-c1f0-4447-b481-47bff77c04e2.png',
     valuationsCount: 4,
     latestValuation: {
       id: 'val6',
