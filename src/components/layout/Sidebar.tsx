@@ -8,11 +8,15 @@ import {
   BarChart2,
   FolderOpen,
   Settings,
-  Users
+  Users,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 interface SidebarProps {
   collapsed: boolean;
+  onToggle: () => void;
 }
 
 interface NavItemProps {
@@ -38,15 +42,18 @@ const NavItem = ({ icon: Icon, label, href, collapsed, active }: NavItemProps) =
   );
 };
 
-const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
+const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
   const location = useLocation();
   const currentPath = location.pathname;
   
-  const navItems = [
+  const mainNavItems = [
     { icon: Home, label: 'Dashboard', href: '/dashboard' },
     { icon: Building, label: 'Empresas', href: '/companies' },
     { icon: BarChart2, label: 'Valoraciones', href: '/valuations' },
     { icon: FolderOpen, label: 'Portfolios', href: '/portfolios' },
+  ];
+
+  const bottomNavItems = [
     { icon: Users, label: 'Usuarios', href: '/users' },
     { icon: Settings, label: 'Configuración', href: '/settings' },
   ];
@@ -54,25 +61,34 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
   return (
     <div
       className={cn(
-        "bg-sidebar h-screen border-r border-sidebar-border transition-all duration-300 flex flex-col",
+        "bg-sidebar h-screen border-r border-sidebar-border transition-all duration-300 flex flex-col relative",
         collapsed ? "w-[80px]" : "w-[260px]"
       )}
     >
+      {/* Toggle button positioned half on sidebar, half outside */}
+      <Button
+        onClick={onToggle}
+        variant="outline"
+        size="icon"
+        className="absolute -right-4 top-12 z-50 h-8 w-8 rounded-full border border-sidebar-border bg-background shadow-sm"
+      >
+        {collapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
+      </Button>
+      
       <div className="p-4 flex items-center justify-center h-16 border-b border-sidebar-border">
-        <span className={cn(
-          "font-semibold text-lg transition-opacity duration-200",
-          collapsed ? "opacity-0 hidden" : "opacity-100"
-        )}>
-          Fair Value
-        </span>
-        {collapsed && (
-          <span className="text-xl font-bold text-primary">FV</span>
-        )}
+        <Link to="/" className="flex items-center">
+          {collapsed ? (
+            <img src="/lovable-uploads/cbd6346f-281f-4424-aadb-c2b0ae3d87fc.png" alt="Fair Value Logo" className="h-8" />
+          ) : (
+            <img src="/lovable-uploads/cbd6346f-281f-4424-aadb-c2b0ae3d87fc.png" alt="Fair Value Logo" className="h-10" />
+          )}
+        </Link>
       </div>
       
+      {/* Main navigation items */}
       <div className="flex-1 overflow-y-auto py-4 px-2">
         <nav className="space-y-1">
-          {navItems.map((item) => (
+          {mainNavItems.map((item) => (
             <NavItem
               key={item.href}
               icon={item.icon}
@@ -85,8 +101,25 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
         </nav>
       </div>
       
+      {/* Bottom navigation section */}
+      <div className="border-t border-sidebar-border py-4 px-2">
+        <nav className="space-y-1">
+          {bottomNavItems.map((item) => (
+            <NavItem
+              key={item.href}
+              icon={item.icon}
+              label={item.label}
+              href={item.href}
+              collapsed={collapsed}
+              active={currentPath === item.href || currentPath.startsWith(`${item.href}/`)}
+            />
+          ))}
+        </nav>
+      </div>
+      
+      {/* User profile section */}
       <div className="border-t border-sidebar-border p-4">
-        <div className={cn(
+        <Link to="/profile" className={cn(
           "flex items-center gap-3",
           collapsed ? "justify-center" : "justify-start"
         )}>
@@ -99,7 +132,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
               <p className="text-xs text-sidebar-foreground/70">usuario@empresa.com</p>
             </div>
           )}
-        </div>
+        </Link>
       </div>
     </div>
   );

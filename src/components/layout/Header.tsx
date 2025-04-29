@@ -1,53 +1,74 @@
 
 import React from 'react';
-import { Menu, ChevronRight, ChevronLeft, User, Bell, Search } from 'lucide-react';
+import { Bell, User, Home, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
 
 interface HeaderProps {
   title?: string;
-  onToggleSidebar: () => void;
-  sidebarCollapsed: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({ title, onToggleSidebar, sidebarCollapsed }) => {
+const Header: React.FC<HeaderProps> = ({ title }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const pathSegments = location.pathname.split('/').filter(Boolean);
+  
+  const handleBack = () => {
+    navigate(-1);
+  };
+  
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b bg-background px-4 md:px-6">
       <div className="flex items-center gap-2">
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden"
-          onClick={onToggleSidebar}
-        >
-          <Menu className="h-5 w-5" />
-          <span className="sr-only">Toggle sidebar</span>
-        </Button>
+        {pathSegments.length > 0 && (
+          <Button
+            variant="ghost"
+            size="icon"
+            className="h-8 w-8"
+            onClick={handleBack}
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span className="sr-only">Go back</span>
+          </Button>
+        )}
         
-        <Button
-          variant="ghost"
-          size="icon"
-          className="hidden md:flex"
-          onClick={onToggleSidebar}
-        >
-          {sidebarCollapsed ? (
-            <ChevronRight className="h-5 w-5" />
-          ) : (
-            <ChevronLeft className="h-5 w-5" />
-          )}
-          <span className="sr-only">
-            {sidebarCollapsed ? "Expand sidebar" : "Collapse sidebar"}
-          </span>
-        </Button>
-        
-        {title && <h1 className="text-xl font-semibold">{title}</h1>}
+        <Breadcrumb>
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink href="/">
+                <Home className="h-4 w-4 mr-1" />
+                Inicio
+              </BreadcrumbLink>
+            </BreadcrumbItem>
+            
+            {pathSegments.map((segment, index) => {
+              const href = `/${pathSegments.slice(0, index + 1).join('/')}`;
+              const isLast = index === pathSegments.length - 1;
+              
+              // Format the segment for better display
+              const formattedSegment = segment
+                .replace(/-/g, ' ')
+                .replace(/\b\w/g, l => l.toUpperCase());
+              
+              return (
+                <React.Fragment key={href}>
+                  <BreadcrumbSeparator />
+                  <BreadcrumbItem>
+                    {isLast ? (
+                      <span className="text-sm font-medium">{formattedSegment}</span>
+                    ) : (
+                      <BreadcrumbLink href={href}>{formattedSegment}</BreadcrumbLink>
+                    )}
+                  </BreadcrumbItem>
+                </React.Fragment>
+              );
+            })}
+          </BreadcrumbList>
+        </Breadcrumb>
       </div>
       
       <div className="flex items-center gap-2">
-        <Button variant="ghost" size="icon">
-          <Search className="h-5 w-5" />
-          <span className="sr-only">Search</span>
-        </Button>
-        
         <Button variant="ghost" size="icon">
           <Bell className="h-5 w-5" />
           <span className="sr-only">Notifications</span>

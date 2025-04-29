@@ -1,8 +1,7 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar';
 import Header from './Header';
-import Breadcrumbs from './Breadcrumbs';
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -14,7 +13,6 @@ interface DashboardLayoutProps {
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({
   children,
   title,
-  breadcrumbItems,
   showBackButton = false
 }) => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState<boolean>(() => {
@@ -30,22 +28,12 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({
 
   return (
     <div className="flex min-h-screen bg-background">
-      <Sidebar collapsed={sidebarCollapsed} />
+      <Sidebar collapsed={sidebarCollapsed} onToggle={toggleSidebar} />
       
       <div className="flex-1 flex flex-col">
-        <Header 
-          title={title} 
-          onToggleSidebar={toggleSidebar} 
-          sidebarCollapsed={sidebarCollapsed} 
-        />
+        <Header title={title} />
         
         <main className="flex-1 p-4 md:p-6">
-          {(breadcrumbItems || showBackButton) && (
-            <div className="mb-6">
-              <Breadcrumbs items={breadcrumbItems} showBackButton={showBackButton} />
-            </div>
-          )}
-          
           {children}
         </main>
       </div>
