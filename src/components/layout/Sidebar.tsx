@@ -78,7 +78,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
       <div className="p-4 flex items-center justify-center h-16 border-b border-sidebar-border">
         <Link to="/" className="flex items-center">
           {collapsed ? (
-            <img src="/lovable-uploads/cbd6346f-281f-4424-aadb-c2b0ae3d87fc.png" alt="Fair Value Logo" className="h-8" />
+            <img src="/lovable-uploads/d1d26cf3-058a-4ddc-8f33-547f69066f5c.png" alt="Fair Value Logo" className="h-8" />
           ) : (
             <img src="/lovable-uploads/cbd6346f-281f-4424-aadb-c2b0ae3d87fc.png" alt="Fair Value Logo" className="h-10" />
           )}
