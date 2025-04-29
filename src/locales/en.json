@@ -70,6 +70,20 @@
       "registrationId": "Registration ID",
       "website": "Website",
       "description": "Description"
+    },
+    "create": {
+      "title": "Create new company",
+      "success": "Company created successfully",
+      "error": "Error creating company",
+      "logoUpload": "Upload logo",
+      "logoRemove": "Remove logo",
+      "logoDescription": "Upload company logo (PNG, JPG or SVG)",
+      "companyName": "Company name",
+      "requiredField": "This field is required",
+      "submit": "Create company",
+      "selectSector": "Select a sector",
+      "selectSubsector": "Select a subsector",
+      "loadingSubsectors": "Loading subsectors..."
     }
   },
   "valuations": {

@@ -70,6 +70,20 @@
       "registrationId": "[COMPANIES.FIELDS.REGISTRATIONID]",
       "website": "[COMPANIES.FIELDS.WEBSITE]",
       "description": "[COMPANIES.FIELDS.DESCRIPTION]"
+    },
+    "create": {
+      "title": "[COMPANIES.CREATE.TITLE]",
+      "success": "[COMPANIES.CREATE.SUCCESS]",
+      "error": "[COMPANIES.CREATE.ERROR]",
+      "logoUpload": "[COMPANIES.CREATE.LOGOUPLOAD]",
+      "logoRemove": "[COMPANIES.CREATE.LOGOREMOVE]",
+      "logoDescription": "[COMPANIES.CREATE.LOGODESCRIPTION]",
+      "companyName": "[COMPANIES.CREATE.COMPANYNAME]",
+      "requiredField": "[COMPANIES.CREATE.REQUIREDFIELD]",
+      "submit": "[COMPANIES.CREATE.SUBMIT]",
+      "selectSector": "[COMPANIES.CREATE.SELECTSECTOR]",
+      "selectSubsector": "[COMPANIES.CREATE.SELECTSUBSECTOR]",
+      "loadingSubsectors": "[COMPANIES.CREATE.LOADINGSUBSECTORS]"
     }
   },
   "valuations": {

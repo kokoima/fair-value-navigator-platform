@@ -307,4 +307,26 @@ export const fetchCompanyById = async (id: string): Promise<Company> => {
   return company;
 };
 
+// Create a new company
+export const createCompany = async (companyData: Omit<Company, "id" | "valuationsCount" | "latestValuation">): Promise<Company> => {
+  // Simulate API call delay
+  await new Promise(resolve => setTimeout(resolve, 800));
+  
+  // Generate a new ID
+  const newId = `${mockCompanies.length + 1}`;
+  
+  // Create new company object
+  const newCompany: Company = {
+    id: newId,
+    ...companyData,
+    valuationsCount: 0,
+    latestValuation: undefined
+  };
+  
+  // Add to mock data (in real app this would be a POST request)
+  mockCompanies.push(newCompany);
+  
+  return newCompany;
+};
+
 // Add more company-related API methods as needed

@@ -70,6 +70,20 @@
       "registrationId": "ID de registro",
       "website": "Sitio web",
       "description": "Descripción"
+    },
+    "create": {
+      "title": "Crear nueva empresa",
+      "success": "Empresa creada con éxito",
+      "error": "Error al crear la empresa",
+      "logoUpload": "Subir logo",
+      "logoRemove": "Eliminar logo",
+      "logoDescription": "Subir logo de la empresa (PNG, JPG o SVG)",
+      "companyName": "Nombre de la empresa",
+      "requiredField": "Este campo es obligatorio",
+      "submit": "Crear empresa",
+      "selectSector": "Seleccionar un sector",
+      "selectSubsector": "Seleccionar un subsector",
+      "loadingSubsectors": "Cargando subsectores..."
     }
   },
   "valuations": {
