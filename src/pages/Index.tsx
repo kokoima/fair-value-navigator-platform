@@ -7,6 +7,15 @@ import StatCard from '@/components/dashboard/StatCard';
 import RecentActivity from '@/components/dashboard/RecentActivity';
 import { Building2, BarChart4, FolderKanban, TrendingUp } from "lucide-react";
 
+// Import the ActivityItem type to ensure type consistency
+interface ActivityItem {
+  id: string;
+  title: string;
+  description: string;
+  timestamp: string;
+  type: 'company' | 'valuation' | 'portfolio' | 'user';
+}
+
 const Index = () => {
   const navigate = useNavigate();
   
@@ -27,7 +36,7 @@ const Index = () => {
   }
 
   // Datos de actividades recientes para el componente RecentActivity
-  const recentActivities = [
+  const recentActivities: ActivityItem[] = [
     {
       id: '1',
       title: 'Empresa Tecnología S.A.',
