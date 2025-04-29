@@ -85,6 +85,13 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
             </TableHead>
             <TableHead 
               className="cursor-pointer"
+              onClick={() => onSort('subsector')}
+            >
+              {t('companies.table.subsector')}
+              <SortIndicator columnKey="subsector" />
+            </TableHead>
+            <TableHead 
+              className="cursor-pointer"
               onClick={() => onSort('country')}
             >
               {t('companies.table.country')}
@@ -125,6 +132,7 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
                 </div>
               </TableCell>
               <TableCell>{company.sector}</TableCell>
+              <TableCell>{company.subsector}</TableCell>
               <TableCell>{company.country}</TableCell>
               <TableCell>
                 {company.latestValuation ? (

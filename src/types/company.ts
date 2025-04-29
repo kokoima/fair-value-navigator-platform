@@ -10,7 +10,7 @@ export interface Company {
   name: string;
   tradingName?: string;
   sector: string;
-  subsector?: string;
+  subsector: string;  // Changed from optional to required
   country: string;
   foundedYear?: number;
   registrationId?: string;
