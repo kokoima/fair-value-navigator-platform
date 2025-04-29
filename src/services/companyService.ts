@@ -94,6 +94,196 @@ const mockCompanies: Company[] = [
       value: 7300000,
       date: '2023-07-12'
     }
+  },
+  {
+    id: '6',
+    name: 'Wayne Enterprises',
+    tradingName: 'Wayne Corp',
+    sector: 'Tecnología',
+    subsector: 'Investigación',
+    country: 'Estados Unidos',
+    foundedYear: 1965,
+    registrationId: 'US45678',
+    website: 'https://wayne.example.com',
+    description: 'Conglomerado con inversiones en tecnología, defensa e investigación.',
+    logoUrl: '/placeholder.svg',
+    valuationsCount: 8,
+    latestValuation: {
+      id: 'val5',
+      value: 41200000,
+      date: '2023-11-05'
+    }
+  },
+  {
+    id: '7',
+    name: 'LexCorp',
+    tradingName: 'LexCorp',
+    sector: 'Tecnología',
+    subsector: 'Innovación',
+    country: 'Estados Unidos',
+    foundedYear: 1983,
+    registrationId: 'US78901',
+    website: 'https://lexcorp.example.com',
+    description: 'Empresa de tecnología con enfoque en innovación y desarrollo sostenible.',
+    logoUrl: '/placeholder.svg',
+    valuationsCount: 4,
+    latestValuation: {
+      id: 'val6',
+      value: 23700000,
+      date: '2023-10-18'
+    }
+  },
+  {
+    id: '8',
+    name: 'Oscorp Industries',
+    tradingName: 'Oscorp',
+    sector: 'Química',
+    subsector: 'Investigación',
+    country: 'Estados Unidos',
+    foundedYear: 1989,
+    registrationId: 'US13579',
+    website: 'https://oscorp.example.com',
+    description: 'Empresa especializada en desarrollo de nuevos materiales y compuestos químicos.',
+    logoUrl: '/placeholder.svg',
+    valuationsCount: 2,
+    latestValuation: {
+      id: 'val7',
+      value: 14900000,
+      date: '2023-09-30'
+    }
+  },
+  {
+    id: '9',
+    name: 'Massive Dynamic',
+    tradingName: 'Massive',
+    sector: 'Tecnología',
+    subsector: 'Biotecnología',
+    country: 'Estados Unidos',
+    foundedYear: 2002,
+    registrationId: 'US24680',
+    website: 'https://massivedynamic.example.com',
+    description: 'Empresa de vanguardia en investigación biotecnológica y médica.',
+    logoUrl: '/placeholder.svg',
+    valuationsCount: 6,
+    latestValuation: {
+      id: 'val8',
+      value: 33500000,
+      date: '2023-11-22'
+    }
+  },
+  {
+    id: '10',
+    name: 'Soylent Corp',
+    tradingName: 'Soylent',
+    sector: 'Alimentación',
+    subsector: 'Innovación alimentaria',
+    country: 'Estados Unidos',
+    foundedYear: 2010,
+    registrationId: 'US36912',
+    website: 'https://soylent.example.com',
+    description: 'Empresa dedicada al desarrollo de alternativas alimenticias sostenibles.',
+    logoUrl: '/placeholder.svg',
+    valuationsCount: 3,
+    latestValuation: {
+      id: 'val9',
+      value: 8700000,
+      date: '2023-08-05'
+    }
+  },
+  {
+    id: '11',
+    name: 'Cyberdyne Systems',
+    tradingName: 'Cyberdyne',
+    sector: 'Tecnología',
+    subsector: 'Robótica',
+    country: 'Estados Unidos',
+    foundedYear: 1990,
+    registrationId: 'US14725',
+    website: 'https://cyberdyne.example.com',
+    description: 'Empresa líder en desarrollo de sistemas robóticos avanzados.',
+    logoUrl: '/placeholder.svg',
+    valuationsCount: 7,
+    latestValuation: {
+      id: 'val10',
+      value: 27500000,
+      date: '2023-12-01'
+    }
+  },
+  {
+    id: '12',
+    name: 'InGen Technologies',
+    tradingName: 'InGen',
+    sector: 'Biotecnología',
+    subsector: 'Genética',
+    country: 'Costa Rica',
+    foundedYear: 1985,
+    registrationId: 'CR25836',
+    website: 'https://ingen.example.com',
+    description: 'Empresa especializada en investigación genética y clonación.',
+    logoUrl: '/placeholder.svg',
+    valuationsCount: 4,
+    latestValuation: {
+      id: 'val11',
+      value: 19800000,
+      date: '2023-10-12'
+    }
+  },
+  {
+    id: '13',
+    name: 'Aperture Science',
+    tradingName: 'Aperture',
+    sector: 'Tecnología',
+    subsector: 'Investigación',
+    country: 'Estados Unidos',
+    foundedYear: 1943,
+    registrationId: 'US36947',
+    website: 'https://aperturescience.example.com',
+    description: 'Compañía dedicada a la investigación científica experimental.',
+    logoUrl: '/placeholder.svg',
+    valuationsCount: 2,
+    latestValuation: {
+      id: 'val12',
+      value: 15300000,
+      date: '2023-09-08'
+    }
+  },
+  {
+    id: '14',
+    name: 'Tyrell Corporation',
+    tradingName: 'Tyrell',
+    sector: 'Biotecnología',
+    subsector: 'Ingeniería genética',
+    country: 'Estados Unidos',
+    foundedYear: 1975,
+    registrationId: 'US15937',
+    website: 'https://tyrell.example.com',
+    description: 'Empresa pionera en el campo de la ingeniería genética avanzada.',
+    logoUrl: '/placeholder.svg',
+    valuationsCount: 5,
+    latestValuation: {
+      id: 'val13',
+      value: 30600000,
+      date: '2023-11-17'
+    }
+  },
+  {
+    id: '15',
+    name: 'Weyland-Yutani',
+    tradingName: 'Weyland Corp',
+    sector: 'Espacial',
+    subsector: 'Exploración',
+    country: 'Reino Unido',
+    foundedYear: 1973,
+    registrationId: 'UK28461',
+    website: 'https://weyland-yutani.example.com',
+    description: 'Corporación dedicada a la exploración espacial y explotación de recursos extraterrestres.',
+    logoUrl: '/placeholder.svg',
+    valuationsCount: 9,
+    latestValuation: {
+      id: 'val14',
+      value: 67200000,
+      date: '2023-12-15'
+    }
   }
 ];
 

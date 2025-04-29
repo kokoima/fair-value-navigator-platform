@@ -9,6 +9,14 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Skeleton } from '@/components/ui/skeleton';
 import CompaniesTable from '@/components/features/companies/CompaniesTable';
+import { 
+  Pagination, 
+  PaginationContent, 
+  PaginationItem, 
+  PaginationLink, 
+  PaginationNext, 
+  PaginationPrevious 
+} from '@/components/ui/pagination';
 import { Company } from '@/types/company';
 import { fetchCompanies } from '@/services/companyService';
 
@@ -18,6 +26,8 @@ const Companies: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [sortKey, setSortKey] = useState<keyof Company>('name');
   const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5;
 
   // Fetch companies using React Query
   const { data: companies, isLoading, error } = useQuery({
@@ -28,6 +38,7 @@ const Companies: React.FC = () => {
   // Handle search input changes
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(e.target.value);
+    setCurrentPage(1); // Reset to first page when searching
   };
 
   // Filter companies based on search term
@@ -36,6 +47,13 @@ const Companies: React.FC = () => {
     company.sector.toLowerCase().includes(searchTerm.toLowerCase()) ||
     company.country.toLowerCase().includes(searchTerm.toLowerCase())
   ) || [];
+
+  // Calculate pagination
+  const totalItems = filteredCompanies.length;
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+  const currentItems = filteredCompanies.slice(startIndex, endIndex);
 
   // Handle sorting changes
   const handleSort = (key: keyof Company) => {
@@ -55,6 +73,42 @@ const Companies: React.FC = () => {
   // Navigate to new company page
   const handleNewCompany = () => {
     navigate('/companies/new');
+  };
+
+  // Handle page change
+  const handlePageChange = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
+
+  // Generate pagination links
+  const renderPaginationLinks = () => {
+    const pages = [];
+    const maxPagesToShow = 5;
+    
+    let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
+    let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+    
+    if (endPage - startPage + 1 < maxPagesToShow) {
+      startPage = Math.max(1, endPage - maxPagesToShow + 1);
+    }
+    
+    for (let i = startPage; i <= endPage; i++) {
+      pages.push(
+        <PaginationItem key={i}>
+          <PaginationLink
+            isActive={currentPage === i}
+            onClick={() => handlePageChange(i)}
+            aria-label={`${t('pagination.page')} ${i}`}
+          >
+            {i}
+          </PaginationLink>
+        </PaginationItem>
+      );
+    }
+    
+    return pages;
   };
 
   return (
@@ -93,13 +147,39 @@ const Companies: React.FC = () => {
             {t('companies.errorLoading')}
           </div>
         ) : (
-          <CompaniesTable 
-            companies={filteredCompanies}
-            onRowClick={handleRowClick}
-            sortKey={sortKey}
-            sortDirection={sortDirection}
-            onSort={handleSort}
-          />
+          <>
+            <CompaniesTable 
+              companies={currentItems}
+              onRowClick={handleRowClick}
+              sortKey={sortKey}
+              sortDirection={sortDirection}
+              onSort={handleSort}
+            />
+            
+            {totalPages > 1 && (
+              <Pagination className="mt-6">
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious 
+                      onClick={() => handlePageChange(currentPage - 1)} 
+                      aria-disabled={currentPage === 1}
+                      className={currentPage === 1 ? 'pointer-events-none opacity-50' : ''}
+                    />
+                  </PaginationItem>
+                  
+                  {renderPaginationLinks()}
+                  
+                  <PaginationItem>
+                    <PaginationNext 
+                      onClick={() => handlePageChange(currentPage + 1)} 
+                      aria-disabled={currentPage === totalPages}
+                      className={currentPage === totalPages ? 'pointer-events-none opacity-50' : ''}
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
+            )}
+          </>
         )}
         
         {!isLoading && filteredCompanies.length === 0 && (
