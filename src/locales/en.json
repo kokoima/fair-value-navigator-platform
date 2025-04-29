@@ -59,6 +59,7 @@
   "language": {
     "en": "English",
     "es": "Spanish",
+    "debug": "Debug Mode",
     "currentLanguage": "Current language"
   },
   "pagination": {

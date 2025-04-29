@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Languages, Check } from 'lucide-react';
+import { Languages, Check, Bug } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { 
   DropdownMenu, 
@@ -20,12 +20,28 @@ const LanguageSelector: React.FC = () => {
     i18n.changeLanguage(lng);
   };
 
+  const getLanguageDisplay = () => {
+    switch (currentLanguage) {
+      case 'en': return t('language.en');
+      case 'es': return t('language.es');
+      case 'debug': return 'Debug';
+      default: return t('language.en');
+    }
+  };
+
+  const getLanguageIcon = () => {
+    if (currentLanguage === 'debug') {
+      return <Bug className="h-4 w-4 mr-1" />;
+    }
+    return <Languages className="h-4 w-4 mr-1" />;
+  };
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="flex items-center gap-1 px-3">
-          <Languages className="h-4 w-4 mr-1" />
-          <span className="hidden sm:inline">{currentLanguage === 'en' ? t('language.en') : t('language.es')}</span>
+          {getLanguageIcon()}
+          <span className="hidden sm:inline">{getLanguageDisplay()}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -38,6 +54,14 @@ const LanguageSelector: React.FC = () => {
         <DropdownMenuItem onClick={() => changeLanguage('es')} className="flex justify-between">
           {t('language.es')}
           {currentLanguage === 'es' && <Check className="h-4 w-4 ml-2" />}
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={() => changeLanguage('debug')} className="flex justify-between">
+          <div className="flex items-center">
+            <Bug className="h-4 w-4 mr-2" />
+            Debug Mode
+          </div>
+          {currentLanguage === 'debug' && <Check className="h-4 w-4 ml-2" />}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

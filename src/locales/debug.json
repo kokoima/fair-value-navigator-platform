@@ -1,0 +1,74 @@
+
+{
+  "header": {
+    "home": "[header.home]",
+    "notifications": "[header.notifications]",
+    "profile": "[header.profile]",
+    "breadcrumbs": {
+      "home": "[header.breadcrumbs.home]",
+      "companies": "[header.breadcrumbs.companies]",
+      "dashboard": "[header.breadcrumbs.dashboard]",
+      "settings": "[header.breadcrumbs.settings]",
+      "users": "[header.breadcrumbs.users]",
+      "valuations": "[header.breadcrumbs.valuations]",
+      "portfolios": "[header.breadcrumbs.portfolios]",
+      "goBack": "[header.breadcrumbs.goBack]"
+    }
+  },
+  "sidebar": {
+    "dashboard": "[sidebar.dashboard]",
+    "companies": "[sidebar.companies]",
+    "valuations": "[sidebar.valuations]",
+    "portfolios": "[sidebar.portfolios]",
+    "users": "[sidebar.users]",
+    "settings": "[sidebar.settings]",
+    "user": "[sidebar.user]"
+  },
+  "dashboard": {
+    "welcome": "[dashboard.welcome]",
+    "welcomeMessage": "[dashboard.welcomeMessage]",
+    "stats": {
+      "companies": "[dashboard.stats.companies]",
+      "valuations": "[dashboard.stats.valuations]",
+      "portfolios": "[dashboard.stats.portfolios]",
+      "projections": "[dashboard.stats.projections]",
+      "total": "[dashboard.stats.total]",
+      "performed": "[dashboard.stats.performed]",
+      "active": "[dashboard.stats.active]", 
+      "currentMonth": "[dashboard.stats.currentMonth]"
+    },
+    "recentActivity": "[dashboard.recentActivity]"
+  },
+  "companies": {
+    "title": "[companies.title]",
+    "search": "[companies.search]",
+    "add": "[companies.add]",
+    "createNew": "[companies.createNew]",
+    "noCompanies": "[companies.noCompanies]",
+    "noSearchResults": "[companies.noSearchResults]",
+    "errorLoading": "[companies.errorLoading]",
+    "table": {
+      "name": "[companies.table.name]",
+      "sector": "[companies.table.sector]",
+      "country": "[companies.table.country]",
+      "latestValuation": "[companies.table.latestValuation]",
+      "valuations": "[companies.table.valuations]",
+      "noValuation": "[companies.table.noValuation]"
+    }
+  },
+  "language": {
+    "en": "[language.en]",
+    "es": "[language.es]",
+    "debug": "Debug Mode",
+    "currentLanguage": "[language.currentLanguage]"
+  },
+  "pagination": {
+    "previous": "[pagination.previous]",
+    "next": "[pagination.next]",
+    "page": "[pagination.page]",
+    "of": "[pagination.of]",
+    "showing": "[pagination.showing]",
+    "to": "[pagination.to]",
+    "results": "[pagination.results]"
+  }
+}
