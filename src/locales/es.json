@@ -1,0 +1,32 @@
+
+{
+  "header": {
+    "home": "Inicio",
+    "notifications": "Notificaciones",
+    "profile": "Perfil de usuario"
+  },
+  "dashboard": {
+    "welcome": "Bienvenido a tu dashboard",
+    "welcomeMessage": "Monitorea las valoraciones de tu negocio en un solo lugar",
+    "stats": {
+      "companies": "Empresas",
+      "valuations": "Valoraciones",
+      "portfolios": "Portfolios",
+      "projections": "Proyecciones",
+      "total": "Total",
+      "performed": "Realizadas",
+      "active": "Activos", 
+      "currentMonth": "Mes actual"
+    },
+    "recentActivity": "Actividad Reciente"
+  },
+  "companies": {
+    "title": "Empresas",
+    "search": "Buscar empresas...",
+    "add": "Añadir empresa"
+  },
+  "language": {
+    "en": "Inglés",
+    "es": "Español"
+  }
+}

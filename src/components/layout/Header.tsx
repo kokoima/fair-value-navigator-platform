@@ -4,6 +4,8 @@ import { Bell, User, Home, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@/components/ui/breadcrumb';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
 
 interface HeaderProps {
   title?: string;
@@ -13,6 +15,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const pathSegments = location.pathname.split('/').filter(Boolean);
+  const { t } = useTranslation();
   
   const handleBack = () => {
     navigate(-1);
@@ -38,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
             <BreadcrumbItem>
               <BreadcrumbLink href="/" className="flex items-center">
                 <Home className="h-4 w-4" />
-                <span className="sr-only">Home</span>
+                <span className="sr-only">{t('header.home')}</span>
               </BreadcrumbLink>
             </BreadcrumbItem>
             
@@ -69,14 +72,16 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
       </div>
       
       <div className="flex items-center gap-2">
+        <LanguageSelector />
+        
         <Button variant="ghost" size="icon">
           <Bell className="h-5 w-5" />
-          <span className="sr-only">Notifications</span>
+          <span className="sr-only">{t('header.notifications')}</span>
         </Button>
         
         <Button variant="ghost" size="icon" className="rounded-full">
           <User className="h-5 w-5" />
-          <span className="sr-only">User profile</span>
+          <span className="sr-only">{t('header.profile')}</span>
         </Button>
       </div>
     </header>

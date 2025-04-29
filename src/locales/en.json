@@ -1,0 +1,32 @@
+
+{
+  "header": {
+    "home": "Home",
+    "notifications": "Notifications",
+    "profile": "User profile"
+  },
+  "dashboard": {
+    "welcome": "Welcome to your dashboard",
+    "welcomeMessage": "Monitor your business valuations in one place",
+    "stats": {
+      "companies": "Companies",
+      "valuations": "Valuations",
+      "portfolios": "Portfolios",
+      "projections": "Projections",
+      "total": "Total",
+      "performed": "Performed",
+      "active": "Active", 
+      "currentMonth": "Current month"
+    },
+    "recentActivity": "Recent Activity"
+  },
+  "companies": {
+    "title": "Companies",
+    "search": "Search companies...",
+    "add": "Add company"
+  },
+  "language": {
+    "en": "English",
+    "es": "Spanish"
+  }
+}
