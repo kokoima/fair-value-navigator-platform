@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { ArrowDown, ArrowUp } from 'lucide-react';
+import { ArrowDown, ArrowUp, ImageOff } from 'lucide-react';
 import { formatCurrency } from '@/utils/formatters';
 import { Company } from '@/types/company';
 
@@ -58,6 +58,11 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
       .slice(0, 2)
       .join('');
   };
+
+  // Handle image loading error
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    e.currentTarget.style.display = 'none';
+  };
   
   return (
     <div className="border rounded-md">
@@ -102,11 +107,19 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
             >
               <TableCell className="font-medium">
                 <div className="flex items-center gap-3">
-                  <Avatar className="h-8 w-8">
-                    {company.logoUrl && (
-                      <AvatarImage src={company.logoUrl} alt={company.name} />
+                  <Avatar className="h-10 w-10 bg-background border">
+                    {company.logoUrl ? (
+                      <AvatarImage 
+                        src={company.logoUrl} 
+                        alt={company.name} 
+                        onError={handleImageError}
+                        className="object-contain p-1"
+                      />
+                    ) : (
+                      <AvatarFallback className="text-xs">
+                        {getInitials(company.name)}
+                      </AvatarFallback>
                     )}
-                    <AvatarFallback>{getInitials(company.name)}</AvatarFallback>
                   </Avatar>
                   <span>{company.name}</span>
                 </div>
