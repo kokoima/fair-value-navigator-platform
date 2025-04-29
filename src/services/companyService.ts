@@ -15,7 +15,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US12345',
     website: 'https://logoipsum-network.example.com',
     description: 'Empresa de tecnología especializada en software de gestión empresarial.',
-    logoUrl: '/lovable-uploads/ec235582-a1c8-46c1-8f9d-c74e759887df.png',
+    logoUrl: '/logos/1.png',
     valuationsCount: 3,
     latestValuation: {
       id: 'val1',
@@ -34,7 +34,7 @@ const mockCompanies: Company[] = [
     registrationId: 'ES67890',
     website: 'https://logoipsum-lion.example.com',
     description: 'Compañía de seguros con operaciones en toda Europa.',
-    logoUrl: '/lovable-uploads/3e5921d0-7d01-46ac-a02d-9927d81f0590.png',
+    logoUrl: '/logos/2.png',
     valuationsCount: 2,
     latestValuation: {
       id: 'val2',
@@ -53,7 +53,7 @@ const mockCompanies: Company[] = [
     registrationId: 'UK54321',
     website: 'https://logoipsum-university.example.com',
     description: 'Institución educativa de renombre internacional.',
-    logoUrl: '/lovable-uploads/532a33d3-0a0b-4fa7-bd49-62ef1f9b39e2.png',
+    logoUrl: '/logos/3.png',
     valuationsCount: 0,
     latestValuation: undefined
   },
