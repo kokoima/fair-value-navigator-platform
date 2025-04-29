@@ -22,7 +22,14 @@
     "to": "[PAGINATION.TO]",
     "of": "[PAGINATION.OF]",
     "results": "[PAGINATION.RESULTS]",
-    "page": "[PAGINATION.PAGE]"
+    "page": "[PAGINATION.PAGE]",
+    "previous": "[PAGINATION.PREVIOUS]",
+    "next": "[PAGINATION.NEXT]"
+  },
+  "language": {
+    "en": "[LANGUAGE.EN]",
+    "es": "[LANGUAGE.ES]",
+    "currentLanguage": "[LANGUAGE.CURRENTLANGUAGE]"
   },
   "companies": {
     "title": "[COMPANIES.TITLE]",

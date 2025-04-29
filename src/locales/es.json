@@ -22,7 +22,14 @@
     "to": "a",
     "of": "de",
     "results": "resultados",
-    "page": "Página"
+    "page": "Página",
+    "previous": "Anterior",
+    "next": "Siguiente"
+  },
+  "language": {
+    "en": "Inglés",
+    "es": "Español",
+    "currentLanguage": "Idioma"
   },
   "companies": {
     "title": "Empresas",

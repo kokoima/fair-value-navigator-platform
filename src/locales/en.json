@@ -22,7 +22,14 @@
     "to": "to",
     "of": "of",
     "results": "results",
-    "page": "Page"
+    "page": "Page",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "language": {
+    "en": "English",
+    "es": "Spanish",
+    "currentLanguage": "Language"
   },
   "companies": {
     "title": "Companies",
