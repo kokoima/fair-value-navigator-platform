@@ -34,7 +34,7 @@ const mockCompanies: Company[] = [
     registrationId: 'ES67890',
     website: 'https://globex.example.com',
     description: 'Compañía de seguros con operaciones en toda Europa.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/13e44b7b-1694-4c40-8dfb-0859a121aa7d.png',
     valuationsCount: 2,
     latestValuation: {
       id: 'val2',
@@ -53,7 +53,7 @@ const mockCompanies: Company[] = [
     registrationId: 'UK54321',
     website: 'https://oceanic.example.com',
     description: 'Aerolínea internacional con rutas en todo el mundo.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/f4a015a8-24f1-4d3d-acff-283e12a9ab4e.png',
     valuationsCount: 0,
     latestValuation: undefined
   },
@@ -68,7 +68,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US98765',
     website: 'https://stark.example.com',
     description: 'Empresa líder en energías renovables y tecnologías limpias.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/7c2d64a9-fa79-4d1e-a77a-706b9083c673.png',
     valuationsCount: 5,
     latestValuation: {
       id: 'val3',
@@ -87,7 +87,7 @@ const mockCompanies: Company[] = [
     registrationId: 'JP24680',
     website: 'https://umbrella.example.com',
     description: 'Empresa dedicada a la investigación y desarrollo de productos farmacéuticos.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/8edf9211-2e44-4d08-9674-58adf152b43d.png',
     valuationsCount: 1,
     latestValuation: {
       id: 'val4',
@@ -106,7 +106,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US45678',
     website: 'https://wayne.example.com',
     description: 'Conglomerado con inversiones en tecnología, defensa e investigación.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/9f747365-c34d-4364-9304-452b8b5bbe79.png',
     valuationsCount: 8,
     latestValuation: {
       id: 'val5',
@@ -125,7 +125,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US78901',
     website: 'https://lexcorp.example.com',
     description: 'Empresa de tecnología con enfoque en innovación y desarrollo sostenible.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/c5131d28-a5b2-40b7-808c-1bf066cbe9a8.png',
     valuationsCount: 4,
     latestValuation: {
       id: 'val6',
@@ -144,7 +144,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US13579',
     website: 'https://oscorp.example.com',
     description: 'Empresa especializada en desarrollo de nuevos materiales y compuestos químicos.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/32cc4a3b-a855-4cf4-bf92-6352f82e3b5a.png',
     valuationsCount: 2,
     latestValuation: {
       id: 'val7',
@@ -163,7 +163,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US24680',
     website: 'https://massivedynamic.example.com',
     description: 'Empresa de vanguardia en investigación biotecnológica y médica.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/2c4d2f17-c276-444d-9c60-4b3a4d4dc76a.png',
     valuationsCount: 6,
     latestValuation: {
       id: 'val8',
@@ -182,7 +182,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US36912',
     website: 'https://soylent.example.com',
     description: 'Empresa dedicada al desarrollo de alternativas alimenticias sostenibles.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/cbd6346f-281f-4424-aadb-c2b0ae3d87fc.png',
     valuationsCount: 3,
     latestValuation: {
       id: 'val9',
@@ -201,7 +201,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US14725',
     website: 'https://cyberdyne.example.com',
     description: 'Empresa líder en desarrollo de sistemas robóticos avanzados.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/13e44b7b-1694-4c40-8dfb-0859a121aa7d.png',
     valuationsCount: 7,
     latestValuation: {
       id: 'val10',
@@ -220,7 +220,7 @@ const mockCompanies: Company[] = [
     registrationId: 'CR25836',
     website: 'https://ingen.example.com',
     description: 'Empresa especializada en investigación genética y clonación.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/f4a015a8-24f1-4d3d-acff-283e12a9ab4e.png',
     valuationsCount: 4,
     latestValuation: {
       id: 'val11',
@@ -239,7 +239,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US36947',
     website: 'https://aperturescience.example.com',
     description: 'Compañía dedicada a la investigación científica experimental.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/7c2d64a9-fa79-4d1e-a77a-706b9083c673.png',
     valuationsCount: 2,
     latestValuation: {
       id: 'val12',
@@ -258,7 +258,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US15937',
     website: 'https://tyrell.example.com',
     description: 'Empresa pionera en el campo de la ingeniería genética avanzada.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/8edf9211-2e44-4d08-9674-58adf152b43d.png',
     valuationsCount: 5,
     latestValuation: {
       id: 'val13',
@@ -277,7 +277,7 @@ const mockCompanies: Company[] = [
     registrationId: 'UK28461',
     website: 'https://weyland-yutani.example.com',
     description: 'Corporación dedicada a la exploración espacial y explotación de recursos extraterrestres.',
-    logoUrl: '/placeholder.svg',
+    logoUrl: '/lovable-uploads/9f747365-c34d-4364-9304-452b8b5bbe79.png',
     valuationsCount: 9,
     latestValuation: {
       id: 'val14',

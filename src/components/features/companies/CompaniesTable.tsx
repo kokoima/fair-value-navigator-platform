@@ -10,6 +10,7 @@ import {
   TableRow 
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { ArrowDown, ArrowUp } from 'lucide-react';
 import { formatCurrency } from '@/utils/formatters';
 import { Company } from '@/types/company';
@@ -47,6 +48,15 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
     return sortDirection === 'asc' 
       ? <ArrowUp className="ml-1 h-4 w-4 inline" /> 
       : <ArrowDown className="ml-1 h-4 w-4 inline" />;
+  };
+
+  // Get initials from company name for the avatar fallback
+  const getInitials = (name: string): string => {
+    return name
+      .split(' ')
+      .map(part => part.charAt(0).toUpperCase())
+      .slice(0, 2)
+      .join('');
   };
   
   return (
@@ -90,7 +100,17 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
               className="cursor-pointer hover:bg-muted/50"
               onClick={() => onRowClick(company.id)}
             >
-              <TableCell className="font-medium">{company.name}</TableCell>
+              <TableCell className="font-medium">
+                <div className="flex items-center gap-3">
+                  <Avatar className="h-8 w-8">
+                    {company.logoUrl && (
+                      <AvatarImage src={company.logoUrl} alt={company.name} />
+                    )}
+                    <AvatarFallback>{getInitials(company.name)}</AvatarFallback>
+                  </Avatar>
+                  <span>{company.name}</span>
+                </div>
+              </TableCell>
               <TableCell>{company.sector}</TableCell>
               <TableCell>{company.country}</TableCell>
               <TableCell>
