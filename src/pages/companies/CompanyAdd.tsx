@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -103,12 +102,19 @@ const CompanyAdd: React.FC = () => {
   // Form submission handler
   const onSubmit = async (values: FormValues) => {
     try {
-      // Create company with the form values
+      // Ensure the required fields are present (they should be due to zod validation)
+      // Create company with the form values - explicitly indicating required fields
       const createdCompany = await createCompany({
-        ...values,
-        // Convert foundedYear to number if it exists
-        foundedYear: values.foundedYear ? Number(values.foundedYear) : undefined,
-        logoUrl: logoPreview
+        name: values.name, // explicitly mark as required
+        sector: values.sector, // explicitly mark as required
+        subsector: values.subsector, // explicitly mark as required
+        country: values.country, // explicitly mark as required
+        tradingName: values.tradingName,
+        foundedYear: values.foundedYear,
+        registrationId: values.registrationId,
+        website: values.website,
+        description: values.description,
+        logoUrl: logoPreview || undefined
       });
       
       toast({
