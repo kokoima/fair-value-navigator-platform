@@ -1,74 +1,76 @@
 
 {
-  "header": {
-    "home": "Inicio",
-    "notifications": "Notificaciones",
-    "profile": "Perfil de usuario",
-    "breadcrumbs": {
-      "home": "Inicio",
-      "companies": "Empresas",
-      "dashboard": "Dashboard",
-      "settings": "Configuración",
-      "users": "Usuarios",
-      "valuations": "Valoraciones",
-      "portfolios": "Portfolios",
-      "goBack": "Volver atrás"
-    }
+  "common": {
+    "back": "Volver",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "notSpecified": "No especificado"
   },
   "sidebar": {
-    "dashboard": "Dashboard",
+    "dashboard": "Panel",
     "companies": "Empresas",
     "valuations": "Valoraciones",
-    "portfolios": "Portfolios",
+    "portfolios": "Portafolios",
     "users": "Usuarios",
     "settings": "Configuración",
     "user": "Usuario"
   },
-  "dashboard": {
-    "welcome": "Bienvenido a tu dashboard",
-    "welcomeMessage": "Monitorea las valoraciones de tu negocio en un solo lugar",
-    "stats": {
-      "companies": "Empresas",
-      "valuations": "Valoraciones",
-      "portfolios": "Portfolios",
-      "projections": "Proyecciones",
-      "total": "Total",
-      "performed": "Realizadas",
-      "active": "Activos", 
-      "currentMonth": "Mes actual"
-    },
-    "recentActivity": "Actividad Reciente"
+  "pagination": {
+    "showing": "Mostrando",
+    "to": "a",
+    "of": "de",
+    "results": "resultados",
+    "page": "Página"
   },
   "companies": {
     "title": "Empresas",
     "search": "Buscar empresas...",
-    "add": "Añadir empresa",
+    "add": "Nueva empresa",
+    "errorLoading": "Error al cargar las empresas",
+    "noCompanies": "No hay empresas. Añade una nueva para empezar.",
+    "noSearchResults": "No se encontraron empresas con esos criterios.",
     "createNew": "Crear nueva empresa",
-    "noCompanies": "No hay empresas disponibles.",
-    "noSearchResults": "No se encontraron empresas con ese criterio de búsqueda.",
-    "errorLoading": "Error al cargar las empresas. Por favor, intenta de nuevo más tarde.",
+    "error": "Error",
+    "detailsError": "No se pudo cargar la información de la empresa",
+    "delete": "Eliminar empresa",
+    "deleteTitle": "¿Eliminar esta empresa?",
+    "deleteDescription": "Esta acción no se puede deshacer. Se eliminarán todos los datos asociados a esta empresa, incluidas las valoraciones.",
+    "latestValuation": "Última valoración",
     "table": {
       "name": "Nombre",
       "sector": "Sector",
       "country": "País",
-      "latestValuation": "Última Valoración",
-      "valuations": "Valoraciones",
+      "latestValuation": "Última valoración",
       "noValuation": "Sin valoración"
+    },
+    "tabs": {
+      "info": "Información",
+      "valuations": "Valoraciones",
+      "users": "Usuarios"
+    },
+    "sections": {
+      "general": "Información General",
+      "details": "Detalles"
+    },
+    "fields": {
+      "tradingName": "Nombre comercial",
+      "sector": "Sector",
+      "subsector": "Subsector",
+      "country": "País",
+      "foundedYear": "Año de fundación",
+      "registrationId": "ID de registro",
+      "website": "Sitio web",
+      "description": "Descripción"
     }
   },
-  "language": {
-    "en": "Inglés",
-    "es": "Español",
-    "debug": "Modo depuración",
-    "currentLanguage": "Idioma actual"
+  "valuations": {
+    "new": "Nueva valoración",
+    "empty": "Esta empresa aún no tiene valoraciones",
+    "create": "Crear valoración"
   },
-  "pagination": {
-    "previous": "Anterior",
-    "next": "Siguiente",
-    "page": "Página",
-    "of": "de",
-    "showing": "Mostrando",
-    "to": "a",
-    "results": "resultados"
+  "users": {
+    "empty": "No hay usuarios asignados a esta empresa"
   }
 }

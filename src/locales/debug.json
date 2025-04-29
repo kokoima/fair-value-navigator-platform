@@ -1,74 +1,76 @@
 
 {
-  "header": {
-    "home": "[header.home]",
-    "notifications": "[header.notifications]",
-    "profile": "[header.profile]",
-    "breadcrumbs": {
-      "home": "[header.breadcrumbs.home]",
-      "companies": "[header.breadcrumbs.companies]",
-      "dashboard": "[header.breadcrumbs.dashboard]",
-      "settings": "[header.breadcrumbs.settings]",
-      "users": "[header.breadcrumbs.users]",
-      "valuations": "[header.breadcrumbs.valuations]",
-      "portfolios": "[header.breadcrumbs.portfolios]",
-      "goBack": "[header.breadcrumbs.goBack]"
-    }
+  "common": {
+    "back": "[COMMON.BACK]",
+    "cancel": "[COMMON.CANCEL]",
+    "save": "[COMMON.SAVE]",
+    "edit": "[COMMON.EDIT]",
+    "delete": "[COMMON.DELETE]",
+    "notSpecified": "[COMMON.NOTSPECIFIED]"
   },
   "sidebar": {
-    "dashboard": "[sidebar.dashboard]",
-    "companies": "[sidebar.companies]",
-    "valuations": "[sidebar.valuations]",
-    "portfolios": "[sidebar.portfolios]",
-    "users": "[sidebar.users]",
-    "settings": "[sidebar.settings]",
-    "user": "[sidebar.user]"
-  },
-  "dashboard": {
-    "welcome": "[dashboard.welcome]",
-    "welcomeMessage": "[dashboard.welcomeMessage]",
-    "stats": {
-      "companies": "[dashboard.stats.companies]",
-      "valuations": "[dashboard.stats.valuations]",
-      "portfolios": "[dashboard.stats.portfolios]",
-      "projections": "[dashboard.stats.projections]",
-      "total": "[dashboard.stats.total]",
-      "performed": "[dashboard.stats.performed]",
-      "active": "[dashboard.stats.active]", 
-      "currentMonth": "[dashboard.stats.currentMonth]"
-    },
-    "recentActivity": "[dashboard.recentActivity]"
-  },
-  "companies": {
-    "title": "[companies.title]",
-    "search": "[companies.search]",
-    "add": "[companies.add]",
-    "createNew": "[companies.createNew]",
-    "noCompanies": "[companies.noCompanies]",
-    "noSearchResults": "[companies.noSearchResults]",
-    "errorLoading": "[companies.errorLoading]",
-    "table": {
-      "name": "[companies.table.name]",
-      "sector": "[companies.table.sector]",
-      "country": "[companies.table.country]",
-      "latestValuation": "[companies.table.latestValuation]",
-      "valuations": "[companies.table.valuations]",
-      "noValuation": "[companies.table.noValuation]"
-    }
-  },
-  "language": {
-    "en": "[language.en]",
-    "es": "[language.es]",
-    "debug": "Debug Mode",
-    "currentLanguage": "[language.currentLanguage]"
+    "dashboard": "[SIDEBAR.DASHBOARD]",
+    "companies": "[SIDEBAR.COMPANIES]",
+    "valuations": "[SIDEBAR.VALUATIONS]",
+    "portfolios": "[SIDEBAR.PORTFOLIOS]",
+    "users": "[SIDEBAR.USERS]",
+    "settings": "[SIDEBAR.SETTINGS]",
+    "user": "[SIDEBAR.USER]"
   },
   "pagination": {
-    "previous": "[pagination.previous]",
-    "next": "[pagination.next]",
-    "page": "[pagination.page]",
-    "of": "[pagination.of]",
-    "showing": "[pagination.showing]",
-    "to": "[pagination.to]",
-    "results": "[pagination.results]"
+    "showing": "[PAGINATION.SHOWING]",
+    "to": "[PAGINATION.TO]",
+    "of": "[PAGINATION.OF]",
+    "results": "[PAGINATION.RESULTS]",
+    "page": "[PAGINATION.PAGE]"
+  },
+  "companies": {
+    "title": "[COMPANIES.TITLE]",
+    "search": "[COMPANIES.SEARCH]",
+    "add": "[COMPANIES.ADD]",
+    "errorLoading": "[COMPANIES.ERRORLOADING]",
+    "noCompanies": "[COMPANIES.NOCOMPANIES]",
+    "noSearchResults": "[COMPANIES.NOSEARCHRESULTS]",
+    "createNew": "[COMPANIES.CREATENEW]",
+    "error": "[COMPANIES.ERROR]",
+    "detailsError": "[COMPANIES.DETAILSERROR]",
+    "delete": "[COMPANIES.DELETE]",
+    "deleteTitle": "[COMPANIES.DELETETITLE]",
+    "deleteDescription": "[COMPANIES.DELETEDESCRIPTION]",
+    "latestValuation": "[COMPANIES.LATESTVALUATION]",
+    "table": {
+      "name": "[COMPANIES.TABLE.NAME]",
+      "sector": "[COMPANIES.TABLE.SECTOR]",
+      "country": "[COMPANIES.TABLE.COUNTRY]",
+      "latestValuation": "[COMPANIES.TABLE.LATESTVALUATION]",
+      "noValuation": "[COMPANIES.TABLE.NOVALUATION]"
+    },
+    "tabs": {
+      "info": "[COMPANIES.TABS.INFO]",
+      "valuations": "[COMPANIES.TABS.VALUATIONS]",
+      "users": "[COMPANIES.TABS.USERS]"
+    },
+    "sections": {
+      "general": "[COMPANIES.SECTIONS.GENERAL]",
+      "details": "[COMPANIES.SECTIONS.DETAILS]"
+    },
+    "fields": {
+      "tradingName": "[COMPANIES.FIELDS.TRADINGNAME]",
+      "sector": "[COMPANIES.FIELDS.SECTOR]",
+      "subsector": "[COMPANIES.FIELDS.SUBSECTOR]",
+      "country": "[COMPANIES.FIELDS.COUNTRY]",
+      "foundedYear": "[COMPANIES.FIELDS.FOUNDEDYEAR]",
+      "registrationId": "[COMPANIES.FIELDS.REGISTRATIONID]",
+      "website": "[COMPANIES.FIELDS.WEBSITE]",
+      "description": "[COMPANIES.FIELDS.DESCRIPTION]"
+    }
+  },
+  "valuations": {
+    "new": "[VALUATIONS.NEW]",
+    "empty": "[VALUATIONS.EMPTY]",
+    "create": "[VALUATIONS.CREATE]"
+  },
+  "users": {
+    "empty": "[USERS.EMPTY]"
   }
 }

@@ -1,19 +1,12 @@
 
 {
-  "header": {
-    "home": "Home",
-    "notifications": "Notifications",
-    "profile": "User profile",
-    "breadcrumbs": {
-      "home": "Home",
-      "companies": "Companies",
-      "dashboard": "Dashboard",
-      "settings": "Settings",
-      "users": "Users",
-      "valuations": "Valuations",
-      "portfolios": "Portfolios",
-      "goBack": "Go back"
-    }
+  "common": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "notSpecified": "Not specified"
   },
   "sidebar": {
     "dashboard": "Dashboard",
@@ -24,51 +17,60 @@
     "settings": "Settings",
     "user": "User"
   },
-  "dashboard": {
-    "welcome": "Welcome to your dashboard",
-    "welcomeMessage": "Monitor your business valuations in one place",
-    "stats": {
-      "companies": "Companies",
-      "valuations": "Valuations",
-      "portfolios": "Portfolios",
-      "projections": "Projections",
-      "total": "Total",
-      "performed": "Performed",
-      "active": "Active", 
-      "currentMonth": "Current month"
-    },
-    "recentActivity": "Recent Activity"
+  "pagination": {
+    "showing": "Showing",
+    "to": "to",
+    "of": "of",
+    "results": "results",
+    "page": "Page"
   },
   "companies": {
     "title": "Companies",
     "search": "Search companies...",
-    "add": "Add company",
+    "add": "New company",
+    "errorLoading": "Error loading companies",
+    "noCompanies": "No companies. Add a new one to get started.",
+    "noSearchResults": "No companies found with those criteria.",
     "createNew": "Create new company",
-    "noCompanies": "No companies available.",
-    "noSearchResults": "No companies found with that search criteria.",
-    "errorLoading": "Error loading companies. Please try again later.",
+    "error": "Error",
+    "detailsError": "Could not load company information",
+    "delete": "Delete company",
+    "deleteTitle": "Delete this company?",
+    "deleteDescription": "This action cannot be undone. All data associated with this company will be deleted, including valuations.",
+    "latestValuation": "Latest valuation",
     "table": {
       "name": "Name",
       "sector": "Sector",
       "country": "Country",
-      "latestValuation": "Latest Valuation",
-      "valuations": "Valuations",
+      "latestValuation": "Latest valuation",
       "noValuation": "No valuation"
+    },
+    "tabs": {
+      "info": "Information",
+      "valuations": "Valuations",
+      "users": "Users"
+    },
+    "sections": {
+      "general": "General Information",
+      "details": "Details"
+    },
+    "fields": {
+      "tradingName": "Trading name",
+      "sector": "Sector",
+      "subsector": "Subsector",
+      "country": "Country",
+      "foundedYear": "Founded year",
+      "registrationId": "Registration ID",
+      "website": "Website",
+      "description": "Description"
     }
   },
-  "language": {
-    "en": "English",
-    "es": "Spanish",
-    "debug": "Debug Mode",
-    "currentLanguage": "Current language"
+  "valuations": {
+    "new": "New valuation",
+    "empty": "This company has no valuations yet",
+    "create": "Create valuation"
   },
-  "pagination": {
-    "previous": "Previous",
-    "next": "Next",
-    "page": "Page",
-    "of": "of",
-    "showing": "Showing",
-    "to": "to",
-    "results": "results"
+  "users": {
+    "empty": "No users assigned to this company"
   }
 }
