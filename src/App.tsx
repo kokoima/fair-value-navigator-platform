@@ -6,6 +6,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
+import ForgotPassword from "./pages/auth/ForgotPassword";
+import RegisterSuccess from "./pages/auth/RegisterSuccess";
 
 const queryClient = new QueryClient();
 
@@ -16,6 +20,13 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          {/* Rutas de autenticación */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/register-success" element={<RegisterSuccess />} />
+          
+          {/* Rutas principales */}
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Index />} />
           {/* Estas rutas serán implementadas en futuras iteraciones */}
