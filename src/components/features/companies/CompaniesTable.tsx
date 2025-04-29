@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { 
@@ -85,13 +84,6 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
             </TableHead>
             <TableHead 
               className="cursor-pointer"
-              onClick={() => onSort('subsector')}
-            >
-              {t('companies.table.subsector')}
-              <SortIndicator columnKey="subsector" />
-            </TableHead>
-            <TableHead 
-              className="cursor-pointer"
               onClick={() => onSort('country')}
             >
               {t('companies.table.country')}
@@ -106,7 +98,7 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
           </TableRow>
         </TableHeader>
         <TableBody>
-          {sortedCompanies.map((company) => (
+          {companies.map((company) => (
             <TableRow 
               key={company.id} 
               className="cursor-pointer hover:bg-muted/50"
@@ -131,8 +123,12 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
                   <span className="font-medium">{company.name}</span>
                 </div>
               </TableCell>
-              <TableCell>{company.sector}</TableCell>
-              <TableCell>{company.subsector}</TableCell>
+              <TableCell>
+                <div className="flex flex-col">
+                  <span>{company.sector}</span>
+                  <span className="text-xs text-muted-foreground">{company.subsector}</span>
+                </div>
+              </TableCell>
               <TableCell>{company.country}</TableCell>
               <TableCell>
                 {company.latestValuation ? (
