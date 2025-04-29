@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { useTranslation } from 'react-i18next';
@@ -36,13 +36,15 @@ const CompanyDetails: React.FC = () => {
   // Fetch company details
   const { data: company, isLoading, error } = useQuery({
     queryKey: ['company', id],
-    queryFn: () => id ? fetchCompanyById(id) : Promise.reject('Invalid ID'),
-    onSuccess: (data) => {
-      if (!companyData) {
-        setCompanyData(data);
-      }
-    }
+    queryFn: () => id ? fetchCompanyById(id) : Promise.reject('Invalid ID')
   });
+
+  // Use effect to update companyData when company data is fetched
+  useEffect(() => {
+    if (company && !companyData) {
+      setCompanyData(company);
+    }
+  }, [company, companyData]);
 
   // Handle edit toggle
   const handleEditToggle = () => {
