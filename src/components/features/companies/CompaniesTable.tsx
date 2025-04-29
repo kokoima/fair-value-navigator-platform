@@ -11,7 +11,7 @@ import {
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { ArrowDown, ArrowUp, ImageOff } from 'lucide-react';
+import { ArrowDown, ArrowUp } from 'lucide-react';
 import { formatCurrency } from '@/utils/formatters';
 import { Company } from '@/types/company';
 
@@ -65,7 +65,7 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
   };
   
   return (
-    <div className="border rounded-md">
+    <div className="border rounded-md overflow-hidden">
       <Table>
         <TableHeader>
           <TableRow>
@@ -106,8 +106,8 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
               onClick={() => onRowClick(company.id)}
             >
               <TableCell className="font-medium">
-                <div className="flex items-center gap-3">
-                  <Avatar className="h-10 w-10 bg-background border">
+                <div className="flex items-center gap-4">
+                  <Avatar className="h-12 w-12 rounded-md bg-background border">
                     {company.logoUrl ? (
                       <AvatarImage 
                         src={company.logoUrl} 
@@ -116,19 +116,19 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
                         className="object-contain p-1"
                       />
                     ) : (
-                      <AvatarFallback className="text-xs">
+                      <AvatarFallback className="text-sm rounded-md">
                         {getInitials(company.name)}
                       </AvatarFallback>
                     )}
                   </Avatar>
-                  <span>{company.name}</span>
+                  <span className="font-medium">{company.name}</span>
                 </div>
               </TableCell>
               <TableCell>{company.sector}</TableCell>
               <TableCell>{company.country}</TableCell>
               <TableCell>
                 {company.latestValuation ? (
-                  <span className="text-primary">
+                  <span className="text-primary font-medium">
                     {formatCurrency(company.latestValuation.value)}
                   </span>
                 ) : (
