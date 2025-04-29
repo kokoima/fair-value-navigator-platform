@@ -10,6 +10,7 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import RegisterSuccess from "./pages/auth/RegisterSuccess";
+import Companies from "./pages/companies/Companies";
 
 const queryClient = new QueryClient();
 
@@ -29,9 +30,9 @@ const App = () => (
           {/* Rutas principales */}
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Index />} />
+          <Route path="/companies" element={<Companies />} />
           {/* Estas rutas serán implementadas en futuras iteraciones */}
-          {/* <Route path="/companies" element={<Companies />} />
-          <Route path="/companies/:id" element={<CompanyDetails />} />
+          {/* <Route path="/companies/:id" element={<CompanyDetails />} />
           <Route path="/valuations" element={<Valuations />} />
           <Route path="/portfolios" element={<Portfolios />} /> */}
           <Route path="*" element={<NotFound />} />
