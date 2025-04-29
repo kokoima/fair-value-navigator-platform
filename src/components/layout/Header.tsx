@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Bell, User, Home, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -21,6 +20,23 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
     navigate(-1);
   };
   
+  // Helper function to translate path segments
+  const translatePathSegment = (segment: string) => {
+    // Try to find translation for known paths
+    const translationKey = `header.breadcrumbs.${segment.toLowerCase()}`;
+    const translated = t(translationKey);
+    
+    // If translation exists and is not the same as the key, use it
+    if (translated !== translationKey) {
+      return translated;
+    }
+    
+    // Otherwise format the segment
+    return segment
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, l => l.toUpperCase());
+  };
+  
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b bg-background px-4 md:px-6">
       <div className="flex items-center gap-2">
@@ -32,7 +48,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
             onClick={handleBack}
           >
             <ArrowLeft className="h-4 w-4" />
-            <span className="sr-only">Go back</span>
+            <span className="sr-only">{t('header.breadcrumbs.goBack')}</span>
           </Button>
         )}
         
@@ -41,27 +57,23 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
             <BreadcrumbItem>
               <BreadcrumbLink href="/" className="flex items-center">
                 <Home className="h-4 w-4" />
-                <span className="sr-only">{t('header.home')}</span>
+                <span className="sr-only">{t('header.breadcrumbs.home')}</span>
               </BreadcrumbLink>
             </BreadcrumbItem>
             
             {pathSegments.map((segment, index) => {
               const href = `/${pathSegments.slice(0, index + 1).join('/')}`;
               const isLast = index === pathSegments.length - 1;
-              
-              // Format the segment for better display
-              const formattedSegment = segment
-                .replace(/-/g, ' ')
-                .replace(/\b\w/g, l => l.toUpperCase());
+              const translatedSegment = translatePathSegment(segment);
               
               return (
                 <React.Fragment key={href}>
                   <BreadcrumbSeparator />
                   <BreadcrumbItem>
                     {isLast ? (
-                      <span className="text-sm font-medium">{formattedSegment}</span>
+                      <span className="text-sm font-medium">{translatedSegment}</span>
                     ) : (
-                      <BreadcrumbLink href={href}>{formattedSegment}</BreadcrumbLink>
+                      <BreadcrumbLink href={href}>{translatedSegment}</BreadcrumbLink>
                     )}
                   </BreadcrumbItem>
                 </React.Fragment>

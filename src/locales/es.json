@@ -3,7 +3,17 @@
   "header": {
     "home": "Inicio",
     "notifications": "Notificaciones",
-    "profile": "Perfil de usuario"
+    "profile": "Perfil de usuario",
+    "breadcrumbs": {
+      "home": "Inicio",
+      "companies": "Empresas",
+      "dashboard": "Dashboard",
+      "settings": "Configuración",
+      "users": "Usuarios",
+      "valuations": "Valoraciones",
+      "portfolios": "Portfolios",
+      "goBack": "Volver atrás"
+    }
   },
   "sidebar": {
     "dashboard": "Dashboard",
@@ -48,6 +58,7 @@
   },
   "language": {
     "en": "Inglés",
-    "es": "Español"
+    "es": "Español",
+    "currentLanguage": "Idioma actual"
   }
 }

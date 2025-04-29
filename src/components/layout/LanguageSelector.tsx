@@ -1,12 +1,20 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Languages } from 'lucide-react';
+import { Languages, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+import { 
+  DropdownMenu, 
+  DropdownMenuContent, 
+  DropdownMenuItem, 
+  DropdownMenuTrigger,
+  DropdownMenuLabel,
+  DropdownMenuSeparator 
+} from '@/components/ui/dropdown-menu';
 
 const LanguageSelector: React.FC = () => {
   const { i18n, t } = useTranslation();
+  const currentLanguage = i18n.language;
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
@@ -15,17 +23,21 @@ const LanguageSelector: React.FC = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon">
-          <Languages className="h-5 w-5" />
-          <span className="sr-only">Change language</span>
+        <Button variant="ghost" className="flex items-center gap-1 px-3">
+          <Languages className="h-4 w-4 mr-1" />
+          <span className="hidden sm:inline">{currentLanguage === 'en' ? t('language.en') : t('language.es')}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onClick={() => changeLanguage('en')}>
+        <DropdownMenuLabel>{t('language.currentLanguage')}</DropdownMenuLabel>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem onClick={() => changeLanguage('en')} className="flex justify-between">
           {t('language.en')}
+          {currentLanguage === 'en' && <Check className="h-4 w-4 ml-2" />}
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => changeLanguage('es')}>
+        <DropdownMenuItem onClick={() => changeLanguage('es')} className="flex justify-between">
           {t('language.es')}
+          {currentLanguage === 'es' && <Check className="h-4 w-4 ml-2" />}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
