@@ -5,6 +5,15 @@
     "notifications": "Notifications",
     "profile": "User profile"
   },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "companies": "Companies",
+    "valuations": "Valuations",
+    "portfolios": "Portfolios",
+    "users": "Users",
+    "settings": "Settings",
+    "user": "User"
+  },
   "dashboard": {
     "welcome": "Welcome to your dashboard",
     "welcomeMessage": "Monitor your business valuations in one place",
@@ -23,7 +32,19 @@
   "companies": {
     "title": "Companies",
     "search": "Search companies...",
-    "add": "Add company"
+    "add": "Add company",
+    "createNew": "Create new company",
+    "noCompanies": "No companies available.",
+    "noSearchResults": "No companies found with that search criteria.",
+    "errorLoading": "Error loading companies. Please try again later.",
+    "table": {
+      "name": "Name",
+      "sector": "Sector",
+      "country": "Country",
+      "latestValuation": "Latest Valuation",
+      "valuations": "Valuations",
+      "noValuation": "No valuation"
+    }
   },
   "language": {
     "en": "English",

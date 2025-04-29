@@ -1,6 +1,7 @@
 
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import {
   Home,
@@ -44,18 +45,19 @@ const NavItem = ({ icon: Icon, label, href, collapsed, active }: NavItemProps) =
 
 const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
   const location = useLocation();
+  const { t } = useTranslation();
   const currentPath = location.pathname;
   
   const mainNavItems = [
-    { icon: Home, label: 'Dashboard', href: '/dashboard' },
-    { icon: Building, label: 'Empresas', href: '/companies' },
-    { icon: BarChart2, label: 'Valoraciones', href: '/valuations' },
-    { icon: FolderOpen, label: 'Portfolios', href: '/portfolios' },
+    { icon: Home, label: t('sidebar.dashboard'), href: '/dashboard' },
+    { icon: Building, label: t('sidebar.companies'), href: '/companies' },
+    { icon: BarChart2, label: t('sidebar.valuations'), href: '/valuations' },
+    { icon: FolderOpen, label: t('sidebar.portfolios'), href: '/portfolios' },
   ];
 
   const bottomNavItems = [
-    { icon: Users, label: 'Usuarios', href: '/users' },
-    { icon: Settings, label: 'Configuración', href: '/settings' },
+    { icon: Users, label: t('sidebar.users'), href: '/users' },
+    { icon: Settings, label: t('sidebar.settings'), href: '/settings' },
   ];
 
   return (
@@ -128,7 +130,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
           </div>
           {!collapsed && (
             <div>
-              <p className="text-sm font-medium">Usuario</p>
+              <p className="text-sm font-medium">{t('sidebar.user')}</p>
               <p className="text-xs text-sidebar-foreground/70">usuario@empresa.com</p>
             </div>
           )}

@@ -5,6 +5,15 @@
     "notifications": "Notificaciones",
     "profile": "Perfil de usuario"
   },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "companies": "Empresas",
+    "valuations": "Valoraciones",
+    "portfolios": "Portfolios",
+    "users": "Usuarios",
+    "settings": "Configuración",
+    "user": "Usuario"
+  },
   "dashboard": {
     "welcome": "Bienvenido a tu dashboard",
     "welcomeMessage": "Monitorea las valoraciones de tu negocio en un solo lugar",
@@ -23,7 +32,19 @@
   "companies": {
     "title": "Empresas",
     "search": "Buscar empresas...",
-    "add": "Añadir empresa"
+    "add": "Añadir empresa",
+    "createNew": "Crear nueva empresa",
+    "noCompanies": "No hay empresas disponibles.",
+    "noSearchResults": "No se encontraron empresas con ese criterio de búsqueda.",
+    "errorLoading": "Error al cargar las empresas. Por favor, intenta de nuevo más tarde.",
+    "table": {
+      "name": "Nombre",
+      "sector": "Sector",
+      "country": "País",
+      "latestValuation": "Última Valoración",
+      "valuations": "Valoraciones",
+      "noValuation": "Sin valoración"
+    }
   },
   "language": {
     "en": "Inglés",

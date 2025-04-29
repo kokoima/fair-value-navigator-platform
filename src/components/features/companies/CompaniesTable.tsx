@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   Table, 
   TableBody, 
@@ -28,6 +29,8 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
   sortDirection,
   onSort
 }) => {
+  const { t } = useTranslation();
+  
   // Sort companies based on current sort settings
   const sortedCompanies = [...companies].sort((a, b) => {
     const valueA = a[sortKey];
@@ -55,28 +58,28 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
               className="cursor-pointer"
               onClick={() => onSort('name')}
             >
-              Nombre 
+              {t('companies.table.name')}
               <SortIndicator columnKey="name" />
             </TableHead>
             <TableHead 
               className="cursor-pointer"
               onClick={() => onSort('sector')}
             >
-              Sector
+              {t('companies.table.sector')}
               <SortIndicator columnKey="sector" />
             </TableHead>
             <TableHead 
               className="cursor-pointer"
               onClick={() => onSort('country')}
             >
-              País
+              {t('companies.table.country')}
               <SortIndicator columnKey="country" />
             </TableHead>
             <TableHead>
-              Última Valoración
+              {t('companies.table.latestValuation')}
             </TableHead>
             <TableHead className="text-center">
-              Valoraciones
+              {t('companies.table.valuations')}
             </TableHead>
           </TableRow>
         </TableHeader>
@@ -97,7 +100,7 @@ const CompaniesTable: React.FC<CompaniesTableProps> = ({
                   </span>
                 ) : (
                   <Badge variant="outline" className="bg-muted">
-                    Sin valoración
+                    {t('companies.table.noValuation')}
                   </Badge>
                 )}
               </TableCell>
