@@ -33,7 +33,7 @@ const NavItem = ({ icon: Icon, label, href, collapsed, active }: NavItemProps) =
     <Link
       to={href}
       className={cn(
-        "flex items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+        "flex items-center gap-2 rounded-md px-3 py-2 text-sm transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
         active ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium" : "text-sidebar-foreground"
       )}
     >
@@ -64,7 +64,7 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
     <div
       className={cn(
         "bg-sidebar h-screen border-r border-sidebar-border transition-all duration-300 flex flex-col relative",
-        collapsed ? "w-[80px]" : "w-[260px]"
+        collapsed ? "w-[60px]" : "w-[195px]" // Reduced from 80px/260px (25% narrower)
       )}
     >
       {/* Toggle button positioned half on sidebar, half outside */}
@@ -77,12 +77,15 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
         {collapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
       </Button>
       
-      <div className="p-4 flex items-center justify-center h-16 border-b border-sidebar-border">
-        <Link to="/" className="flex items-center">
+      <div className="p-4 flex flex-col items-center justify-center h-16 border-b border-sidebar-border">
+        <Link to="/" className="flex flex-col items-center">
           {collapsed ? (
-            <img src="/lovable-uploads/d1d26cf3-058a-4ddc-8f33-547f69066f5c.png" alt="Fair Value Logo" className="h-8" />
+            <img src="/lovable-uploads/d1d26cf3-058a-4ddc-8f33-547f69066f5c.png" alt="Fair Value Logo" className="h-6" />
           ) : (
-            <img src="/lovable-uploads/cbd6346f-281f-4424-aadb-c2b0ae3d87fc.png" alt="Fair Value Logo" className="h-10" />
+            <>
+              <img src="/lovable-uploads/cbd6346f-281f-4424-aadb-c2b0ae3d87fc.png" alt="Fair Value Logo" className="h-7 mb-1" />
+              <span className="text-xs text-primary font-medium">Valoraciones</span>
+            </>
           )}
         </Link>
       </div>
@@ -122,15 +125,15 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed, onToggle }) => {
       {/* User profile section */}
       <div className="border-t border-sidebar-border p-4">
         <Link to="/profile" className={cn(
-          "flex items-center gap-3",
+          "flex items-center gap-2",
           collapsed ? "justify-center" : "justify-start"
         )}>
-          <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-medium">
+          <div className="h-7 w-7 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-medium">
             U
           </div>
           {!collapsed && (
             <div>
-              <p className="text-sm font-medium">{t('sidebar.user')}</p>
+              <p className="text-xs font-medium">{t('sidebar.user')}</p>
               <p className="text-xs text-sidebar-foreground/70">usuario@empresa.com</p>
             </div>
           )}
