@@ -36,9 +36,9 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
         <Breadcrumb>
           <BreadcrumbList>
             <BreadcrumbItem>
-              <BreadcrumbLink href="/">
-                <Home className="h-4 w-4 mr-1" />
-                Inicio
+              <BreadcrumbLink href="/" className="flex items-center">
+                <Home className="h-4 w-4" />
+                <span className="sr-only">Home</span>
               </BreadcrumbLink>
             </BreadcrumbItem>
             
