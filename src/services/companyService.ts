@@ -68,7 +68,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US98765',
     website: 'https://logoipsum-foundation.example.com',
     description: 'Fundación dedicada a causas humanitarias y desarrollo sostenible.',
-    logoUrl: '/lovable-uploads/5b72bcab-f0b7-4bc0-b3fb-51280583b669.png',
+    logoUrl: '/logos/5.png',
     valuationsCount: 5,
     latestValuation: {
       id: 'val3',
@@ -106,7 +106,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US45678',
     website: 'https://logoipsum-cloud.example.com',
     description: 'Proveedor de servicios en la nube y soluciones de almacenamiento digital.',
-    logoUrl: '/lovable-uploads/f2cd45e1-7149-4fb4-9852-07ac64d2be6f.png',
+    logoUrl: '/logos/6.png',
     valuationsCount: 8,
     latestValuation: {
       id: 'val5',
@@ -125,7 +125,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US78901',
     website: 'https://logoipsum-finance.example.com',
     description: 'Institución financiera especializada en servicios bancarios innovadores.',
-    logoUrl: '/lovable-uploads/9b692a63-c1f0-4447-b481-47bff77c04e2.png',
+    logoUrl: '/logos/7.png',
     valuationsCount: 4,
     latestValuation: {
       id: 'val6',
@@ -144,7 +144,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US13579',
     website: 'https://logoipsum-health.example.com',
     description: 'Empresa de tecnología médica enfocada en soluciones de salud digital.',
-    logoUrl: '/lovable-uploads/8a4e671e-1f44-4551-aac3-eb8469ce78cc.png',
+    logoUrl: '/logos/1.png',
     valuationsCount: 2,
     latestValuation: {
       id: 'val7',
@@ -163,7 +163,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US24680',
     website: 'https://logoipsum-energy.example.com',
     description: 'Empresa líder en soluciones de energía renovable y sostenibilidad.',
-    logoUrl: '/lovable-uploads/b1fa8946-eb87-427f-a976-bf31b490c44c.png',
+    logoUrl: '/logos/2.png',
     valuationsCount: 6,
     latestValuation: {
       id: 'val8',
@@ -182,7 +182,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US36912',
     website: 'https://logoipsum-retail.example.com',
     description: 'Cadena de tiendas minoristas con presencia internacional.',
-    logoUrl: '/lovable-uploads/0b0d68ee-88f5-4e23-b504-50dfa7dbad46.png',
+    logoUrl: '/logos/3.png',
     valuationsCount: 3,
     latestValuation: {
       id: 'val9',
@@ -201,7 +201,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US14725',
     website: 'https://logoipsum-ai.example.com',
     description: 'Empresa pionera en desarrollo de soluciones de inteligencia artificial.',
-    logoUrl: '/lovable-uploads/594807a2-886f-4134-8483-c4a828897b41.png',
+    logoUrl: '/logos/4.png',
     valuationsCount: 7,
     latestValuation: {
       id: 'val10',
@@ -220,7 +220,7 @@ const mockCompanies: Company[] = [
     registrationId: 'CR25836',
     website: 'https://logoipsum-biotech.example.com',
     description: 'Empresa de investigación y desarrollo en biotecnología.',
-    logoUrl: '/lovable-uploads/6611417e-f9d5-4118-a6b5-032f3f831893.png',
+    logoUrl: '/logos/5.png',
     valuationsCount: 4,
     latestValuation: {
       id: 'val11',
@@ -239,7 +239,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US36947',
     website: 'https://logoipsum-labs.example.com',
     description: 'Laboratorio de investigación e innovación tecnológica.',
-    logoUrl: '/lovable-uploads/bb3edb72-975d-4470-a01f-e753bd1512ec.png',
+    logoUrl: '/logos/6.png',
     valuationsCount: 2,
     latestValuation: {
       id: 'val12',
@@ -258,7 +258,7 @@ const mockCompanies: Company[] = [
     registrationId: 'US15937',
     website: 'https://logoipsum-systems.example.com',
     description: 'Empresa especializada en desarrollo de sistemas empresariales.',
-    logoUrl: '/lovable-uploads/28296eb7-d75f-4638-8c8f-35066b95c4bc.png',
+    logoUrl: '/logos/7.png',
     valuationsCount: 5,
     latestValuation: {
       id: 'val13',
@@ -277,7 +277,7 @@ const mockCompanies: Company[] = [
     registrationId: 'UK28461',
     website: 'https://logoipsum-global.example.com',
     description: 'Consultora global especializada en estrategia empresarial y transformación digital.',
-    logoUrl: '/lovable-uploads/8a4e671e-1f44-4551-aac3-eb8469ce78cc.png',
+    logoUrl: '/logos/1.png',
     valuationsCount: 9,
     latestValuation: {
       id: 'val14',
