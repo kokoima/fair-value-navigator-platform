@@ -1,12 +1,19 @@
 
 {
-  "common": {
-    "back": "Back",
-    "cancel": "Cancel",
-    "save": "Save",
-    "edit": "Edit",
-    "delete": "Delete",
-    "notSpecified": "Not specified"
+  "header": {
+    "home": "Home",
+    "notifications": "Notifications",
+    "profile": "User profile",
+    "breadcrumbs": {
+      "home": "Home",
+      "companies": "Companies",
+      "dashboard": "Dashboard",
+      "settings": "Settings",
+      "users": "Users",
+      "valuations": "Valuations",
+      "portfolios": "Portfolios",
+      "goBack": "Go back"
+    }
   },
   "sidebar": {
     "dashboard": "Dashboard",
@@ -17,81 +24,51 @@
     "settings": "Settings",
     "user": "User"
   },
-  "pagination": {
-    "showing": "Showing",
-    "to": "to",
-    "of": "of",
-    "results": "results",
-    "page": "Page",
-    "previous": "Previous",
-    "next": "Next"
-  },
-  "language": {
-    "en": "English",
-    "es": "Spanish",
-    "currentLanguage": "Language"
+  "dashboard": {
+    "welcome": "Welcome to your dashboard",
+    "welcomeMessage": "Monitor your business valuations in one place",
+    "stats": {
+      "companies": "Companies",
+      "valuations": "Valuations",
+      "portfolios": "Portfolios",
+      "projections": "Projections",
+      "total": "Total",
+      "performed": "Performed",
+      "active": "Active", 
+      "currentMonth": "Current month"
+    },
+    "recentActivity": "Recent Activity"
   },
   "companies": {
     "title": "Companies",
     "search": "Search companies...",
-    "add": "New company",
-    "errorLoading": "Error loading companies",
-    "noCompanies": "No companies. Add a new one to get started.",
-    "noSearchResults": "No companies found with those criteria.",
+    "add": "Add company",
     "createNew": "Create new company",
-    "error": "Error",
-    "detailsError": "Could not load company information",
-    "delete": "Delete company",
-    "deleteTitle": "Delete this company?",
-    "deleteDescription": "This action cannot be undone. All data associated with this company will be deleted, including valuations.",
-    "latestValuation": "Latest valuation",
+    "noCompanies": "No companies available.",
+    "noSearchResults": "No companies found with that search criteria.",
+    "errorLoading": "Error loading companies. Please try again later.",
     "table": {
       "name": "Name",
       "sector": "Sector",
       "country": "Country",
-      "latestValuation": "Latest valuation",
-      "noValuation": "No valuation"
-    },
-    "tabs": {
-      "info": "Information",
+      "latestValuation": "Latest Valuation",
       "valuations": "Valuations",
-      "users": "Users"
-    },
-    "sections": {
-      "general": "General Information",
-      "details": "Details"
-    },
-    "fields": {
-      "tradingName": "Trading name",
-      "sector": "Sector",
-      "subsector": "Subsector",
-      "country": "Country",
-      "foundedYear": "Founded year",
-      "registrationId": "Registration ID",
-      "website": "Website",
-      "description": "Description"
-    },
-    "create": {
-      "title": "Create new company",
-      "success": "Company created successfully",
-      "error": "Error creating company",
-      "logoUpload": "Upload logo",
-      "logoRemove": "Remove logo",
-      "logoDescription": "Upload company logo (PNG, JPG or SVG)",
-      "companyName": "Company name",
-      "requiredField": "This field is required",
-      "submit": "Create company",
-      "selectSector": "Select a sector",
-      "selectSubsector": "Select a subsector",
-      "loadingSubsectors": "Loading subsectors..."
+      "noValuation": "No valuation"
     }
   },
-  "valuations": {
-    "new": "New valuation",
-    "empty": "This company has no valuations yet",
-    "create": "Create valuation"
+  "language": {
+    "en": "English",
+    "es": "Spanish",
+    "debug": "Debug Mode",
+    "currentLanguage": "Current language"
   },
-  "users": {
-    "empty": "No users assigned to this company"
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page",
+    "of": "of",
+    "showing": "Showing",
+    "to": "to",
+    "results": "results"
   }
 }
