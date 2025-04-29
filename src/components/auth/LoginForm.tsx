@@ -28,8 +28,10 @@ const LoginForm = () => {
       // Simulación de autenticación exitosa
       // En un caso real, aquí haría una llamada a la API de autenticación
       setTimeout(() => {
+        // Guardamos el estado de autenticación en localStorage
+        localStorage.setItem('isAuthenticated', 'true');
         toast.success("Inicio de sesión exitoso");
-        navigate('/dashboard');
+        navigate('/');
       }, 1000);
     } catch (error) {
       toast.error("Error al iniciar sesión");
