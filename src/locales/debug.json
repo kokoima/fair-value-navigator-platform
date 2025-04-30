@@ -1,96 +1,74 @@
 
 {
-  "common": {
-    "cancel": "[Cancel]",
-    "save": "[Save]",
-    "edit": "[Edit]",
-    "delete": "[Delete]",
-    "close": "[Close]",
-    "loading": "[Loading...]",
-    "error": "[Error]",
-    "success": "[Success]",
-    "back": "[Back]"
+  "header": {
+    "home": "[header.home]",
+    "notifications": "[header.notifications]",
+    "profile": "[header.profile]",
+    "breadcrumbs": {
+      "home": "[header.breadcrumbs.home]",
+      "companies": "[header.breadcrumbs.companies]",
+      "dashboard": "[header.breadcrumbs.dashboard]",
+      "settings": "[header.breadcrumbs.settings]",
+      "users": "[header.breadcrumbs.users]",
+      "valuations": "[header.breadcrumbs.valuations]",
+      "portfolios": "[header.breadcrumbs.portfolios]",
+      "goBack": "[header.breadcrumbs.goBack]"
+    }
   },
-  "pagination": {
-    "previous": "[Previous]",
-    "next": "[Next]",
-    "page": "[Page]",
-    "showing": "[Showing]",
-    "to": "[to]",
-    "of": "[of]",
-    "results": "[results]"
-  },
-  "language": {
-    "en": "[English]",
-    "es": "[Spanish]",
-    "debug": "[Debug]"
-  },
-  "auth": {
-    "login": "[Login]",
-    "register": "[Register]",
-    "forgotPassword": "[Forgot Password]",
-    "logout": "[Logout]"
-  },
-  "home": {
-    "welcome": "[Welcome to Fair Value]",
-    "description": "[Valuation platform for private companies]"
+  "sidebar": {
+    "dashboard": "[sidebar.dashboard]",
+    "companies": "[sidebar.companies]",
+    "valuations": "[sidebar.valuations]",
+    "portfolios": "[sidebar.portfolios]",
+    "users": "[sidebar.users]",
+    "settings": "[sidebar.settings]",
+    "user": "[sidebar.user]"
   },
   "dashboard": {
-    "title": "[Dashboard]",
-    "welcome": "[Welcome]",
-    "recentActivity": "[Recent Activity]"
+    "welcome": "[dashboard.welcome]",
+    "welcomeMessage": "[dashboard.welcomeMessage]",
+    "stats": {
+      "companies": "[dashboard.stats.companies]",
+      "valuations": "[dashboard.stats.valuations]",
+      "portfolios": "[dashboard.stats.portfolios]",
+      "projections": "[dashboard.stats.projections]",
+      "total": "[dashboard.stats.total]",
+      "performed": "[dashboard.stats.performed]",
+      "active": "[dashboard.stats.active]", 
+      "currentMonth": "[dashboard.stats.currentMonth]"
+    },
+    "recentActivity": "[dashboard.recentActivity]"
   },
   "companies": {
-    "title": "[Companies]",
-    "add": "[Add]",
-    "search": "[Search companies...]",
-    "errorLoading": "[Error loading companies]",
-    "noCompanies": "[No companies found]",
-    "noSearchResults": "[No companies match your search]",
-    "createNew": "[Create new company]",
-    "detail": {
-      "title": "[Company Details]",
-      "information": "[Company Information]",
-      "valuations": "[Valuations]",
-      "users": "[Company Users]",
-      "logo": "[Company Logo]",
-      "noLogo": "[No logo]",
-      "uploadLogo": "[Upload Logo]",
-      "changeLogo": "[Change Logo]",
-      "removeLogo": "[Remove Logo]",
-      "logoRequirements": "[PNG, JPG or GIF, max 2MB]",
-      "invalidImageType": "[Invalid image type. Please upload a PNG, JPG or GIF]",
-      "imageTooLarge": "[Image is too large. Maximum size is 2MB]",
-      "name": "[Company Name]",
-      "namePlaceholder": "[Enter company name]",
-      "tradingName": "[Trading Name]",
-      "tradingNamePlaceholder": "[Enter trading name]",
-      "sector": "[Sector]",
-      "selectSector": "[Select a sector]",
-      "subsector": "[Subsector]",
-      "selectSubsector": "[Select a subsector]",
-      "country": "[Country]",
-      "selectCountry": "[Select a country]",
-      "foundedYear": "[Founded Year]",
-      "foundedYearPlaceholder": "[YYYY]",
-      "registrationId": "[Registration ID]",
-      "registrationIdPlaceholder": "[Enter registration ID]",
-      "website": "[Website]",
-      "websitePlaceholder": "[https://example.com]",
-      "description": "[Description]",
-      "descriptionPlaceholder": "[Enter company description]",
-      "createValuation": "[Create Valuation]",
-      "editCompany": "[Edit Company]",
-      "saveChanges": "[Save Changes]",
-      "cancelEdit": "[Cancel]"
-    },
-    "create": {
-      "title": "[New Company]",
-      "submit": "[Create Company]",
-      "success": "[Company created]",
-      "successMessage": "[The company was created successfully]",
-      "error": "[Error creating company]",
-      "errorMessage": "[There was an error creating the company]"
+    "title": "[companies.title]",
+    "search": "[companies.search]",
+    "add": "[companies.add]",
+    "createNew": "[companies.createNew]",
+    "noCompanies": "[companies.noCompanies]",
+    "noSearchResults": "[companies.noSearchResults]",
+    "errorLoading": "[companies.errorLoading]",
+    "table": {
+      "name": "[companies.table.name]",
+      "sector": "[companies.table.sector]",
+      "country": "[companies.table.country]",
+      "latestValuation": "[companies.table.latestValuation]",
+      "valuations": "[companies.table.valuations]",
+      "noValuation": "[companies.table.noValuation]"
     }
+  },
+  "language": {
+    "en": "[language.en]",
+    "es": "[language.es]",
+    "debug": "Debug Mode",
+    "currentLanguage": "[language.currentLanguage]"
+  },
+  "pagination": {
+    "previous": "[pagination.previous]",
+    "next": "[pagination.next]",
+    "page": "[pagination.page]",
+    "of": "[pagination.of]",
+    "showing": "[pagination.showing]",
+    "to": "[pagination.to]",
+    "results": "[pagination.results]"
   }
 }

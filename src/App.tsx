@@ -11,8 +11,6 @@ import Register from "./pages/auth/Register";
 import ForgotPassword from "./pages/auth/ForgotPassword";
 import RegisterSuccess from "./pages/auth/RegisterSuccess";
 import Companies from "./pages/companies/Companies";
-import CompanyDetails from "./pages/companies/CompanyDetails";
-import CompanyAdd from "./pages/companies/CompanyAdd";
 
 const queryClient = new QueryClient();
 
@@ -33,10 +31,9 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/dashboard" element={<Index />} />
           <Route path="/companies" element={<Companies />} />
-          <Route path="/companies/new" element={<CompanyAdd />} />
-          <Route path="/companies/:id" element={<CompanyDetails />} />
           {/* Estas rutas serán implementadas en futuras iteraciones */}
-          {/* <Route path="/valuations" element={<Valuations />} />
+          {/* <Route path="/companies/:id" element={<CompanyDetails />} />
+          <Route path="/valuations" element={<Valuations />} />
           <Route path="/portfolios" element={<Portfolios />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>

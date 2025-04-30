@@ -1,96 +1,74 @@
 
 {
-  "common": {
-    "cancel": "Cancel",
-    "save": "Save",
-    "edit": "Edit",
-    "delete": "Delete",
-    "close": "Close",
-    "loading": "Loading...",
-    "error": "Error",
-    "success": "Success",
-    "back": "Back"
+  "header": {
+    "home": "Home",
+    "notifications": "Notifications",
+    "profile": "User profile",
+    "breadcrumbs": {
+      "home": "Home",
+      "companies": "Companies",
+      "dashboard": "Dashboard",
+      "settings": "Settings",
+      "users": "Users",
+      "valuations": "Valuations",
+      "portfolios": "Portfolios",
+      "goBack": "Go back"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "companies": "Companies",
+    "valuations": "Valuations",
+    "portfolios": "Portfolios",
+    "users": "Users",
+    "settings": "Settings",
+    "user": "User"
+  },
+  "dashboard": {
+    "welcome": "Welcome to your dashboard",
+    "welcomeMessage": "Monitor your business valuations in one place",
+    "stats": {
+      "companies": "Companies",
+      "valuations": "Valuations",
+      "portfolios": "Portfolios",
+      "projections": "Projections",
+      "total": "Total",
+      "performed": "Performed",
+      "active": "Active", 
+      "currentMonth": "Current month"
+    },
+    "recentActivity": "Recent Activity"
+  },
+  "companies": {
+    "title": "Companies",
+    "search": "Search companies...",
+    "add": "Add company",
+    "createNew": "Create new company",
+    "noCompanies": "No companies available.",
+    "noSearchResults": "No companies found with that search criteria.",
+    "errorLoading": "Error loading companies. Please try again later.",
+    "table": {
+      "name": "Name",
+      "sector": "Sector",
+      "country": "Country",
+      "latestValuation": "Latest Valuation",
+      "valuations": "Valuations",
+      "noValuation": "No valuation"
+    }
+  },
+  "language": {
+    "en": "English",
+    "es": "Spanish",
+    "debug": "Debug Mode",
+    "currentLanguage": "Current language"
   },
   "pagination": {
     "previous": "Previous",
     "next": "Next",
     "page": "Page",
+    "of": "of",
     "showing": "Showing",
     "to": "to",
-    "of": "of",
     "results": "results"
-  },
-  "language": {
-    "en": "English",
-    "es": "Spanish",
-    "debug": "Debug"
-  },
-  "auth": {
-    "login": "Login",
-    "register": "Register",
-    "forgotPassword": "Forgot Password",
-    "logout": "Logout"
-  },
-  "home": {
-    "welcome": "Welcome to Fair Value",
-    "description": "Valuation platform for private companies"
-  },
-  "dashboard": {
-    "title": "Dashboard",
-    "welcome": "Welcome",
-    "recentActivity": "Recent Activity"
-  },
-  "companies": {
-    "title": "Companies",
-    "add": "Add",
-    "search": "Search companies...",
-    "errorLoading": "Error loading companies",
-    "noCompanies": "No companies found",
-    "noSearchResults": "No companies match your search",
-    "createNew": "Create new company",
-    "detail": {
-      "title": "Company Details",
-      "information": "Company Information",
-      "valuations": "Valuations",
-      "users": "Company Users",
-      "logo": "Company Logo",
-      "noLogo": "No logo",
-      "uploadLogo": "Upload Logo",
-      "changeLogo": "Change Logo",
-      "removeLogo": "Remove Logo",
-      "logoRequirements": "PNG, JPG or GIF, max 2MB",
-      "invalidImageType": "Invalid image type. Please upload a PNG, JPG or GIF",
-      "imageTooLarge": "Image is too large. Maximum size is 2MB",
-      "name": "Company Name",
-      "namePlaceholder": "Enter company name",
-      "tradingName": "Trading Name",
-      "tradingNamePlaceholder": "Enter trading name",
-      "sector": "Sector",
-      "selectSector": "Select a sector",
-      "subsector": "Subsector",
-      "selectSubsector": "Select a subsector",
-      "country": "Country",
-      "selectCountry": "Select a country",
-      "foundedYear": "Founded Year",
-      "foundedYearPlaceholder": "YYYY",
-      "registrationId": "Registration ID",
-      "registrationIdPlaceholder": "Enter registration ID",
-      "website": "Website",
-      "websitePlaceholder": "https://example.com",
-      "description": "Description",
-      "descriptionPlaceholder": "Enter company description",
-      "createValuation": "Create Valuation",
-      "editCompany": "Edit Company",
-      "saveChanges": "Save Changes",
-      "cancelEdit": "Cancel"
-    },
-    "create": {
-      "title": "New Company",
-      "submit": "Create Company",
-      "success": "Company created",
-      "successMessage": "The company was created successfully",
-      "error": "Error creating company",
-      "errorMessage": "There was an error creating the company"
-    }
   }
 }

@@ -1,96 +1,74 @@
 
 {
-  "common": {
-    "cancel": "Cancelar",
-    "save": "Guardar",
-    "edit": "Editar",
-    "delete": "Eliminar",
-    "close": "Cerrar",
-    "loading": "Cargando...",
-    "error": "Error",
-    "success": "Éxito",
-    "back": "Volver"
+  "header": {
+    "home": "Inicio",
+    "notifications": "Notificaciones",
+    "profile": "Perfil de usuario",
+    "breadcrumbs": {
+      "home": "Inicio",
+      "companies": "Empresas",
+      "dashboard": "Dashboard",
+      "settings": "Configuración",
+      "users": "Usuarios",
+      "valuations": "Valoraciones",
+      "portfolios": "Portfolios",
+      "goBack": "Volver atrás"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "companies": "Empresas",
+    "valuations": "Valoraciones",
+    "portfolios": "Portfolios",
+    "users": "Usuarios",
+    "settings": "Configuración",
+    "user": "Usuario"
+  },
+  "dashboard": {
+    "welcome": "Bienvenido a tu dashboard",
+    "welcomeMessage": "Monitorea las valoraciones de tu negocio en un solo lugar",
+    "stats": {
+      "companies": "Empresas",
+      "valuations": "Valoraciones",
+      "portfolios": "Portfolios",
+      "projections": "Proyecciones",
+      "total": "Total",
+      "performed": "Realizadas",
+      "active": "Activos", 
+      "currentMonth": "Mes actual"
+    },
+    "recentActivity": "Actividad Reciente"
+  },
+  "companies": {
+    "title": "Empresas",
+    "search": "Buscar empresas...",
+    "add": "Añadir empresa",
+    "createNew": "Crear nueva empresa",
+    "noCompanies": "No hay empresas disponibles.",
+    "noSearchResults": "No se encontraron empresas con ese criterio de búsqueda.",
+    "errorLoading": "Error al cargar las empresas. Por favor, intenta de nuevo más tarde.",
+    "table": {
+      "name": "Nombre",
+      "sector": "Sector",
+      "country": "País",
+      "latestValuation": "Última Valoración",
+      "valuations": "Valoraciones",
+      "noValuation": "Sin valoración"
+    }
+  },
+  "language": {
+    "en": "Inglés",
+    "es": "Español",
+    "debug": "Modo depuración",
+    "currentLanguage": "Idioma actual"
   },
   "pagination": {
     "previous": "Anterior",
     "next": "Siguiente",
     "page": "Página",
+    "of": "de",
     "showing": "Mostrando",
     "to": "a",
-    "of": "de",
     "results": "resultados"
-  },
-  "language": {
-    "en": "Inglés",
-    "es": "Español",
-    "debug": "Depuración"
-  },
-  "auth": {
-    "login": "Iniciar Sesión",
-    "register": "Registrarse",
-    "forgotPassword": "Olvidé mi Contraseña",
-    "logout": "Cerrar Sesión"
-  },
-  "home": {
-    "welcome": "Bienvenido a Fair Value",
-    "description": "Plataforma de valoración para empresas privadas"
-  },
-  "dashboard": {
-    "title": "Panel",
-    "welcome": "Bienvenido",
-    "recentActivity": "Actividad Reciente"
-  },
-  "companies": {
-    "title": "Empresas",
-    "add": "Añadir",
-    "search": "Buscar empresas...",
-    "errorLoading": "Error cargando empresas",
-    "noCompanies": "No se encontraron empresas",
-    "noSearchResults": "Ninguna empresa coincide con tu búsqueda",
-    "createNew": "Crear nueva empresa",
-    "detail": {
-      "title": "Detalles de Empresa",
-      "information": "Información de la Empresa",
-      "valuations": "Valoraciones",
-      "users": "Usuarios de la Empresa",
-      "logo": "Logo de la Empresa",
-      "noLogo": "Sin logo",
-      "uploadLogo": "Subir Logo",
-      "changeLogo": "Cambiar Logo",
-      "removeLogo": "Eliminar Logo",
-      "logoRequirements": "PNG, JPG o GIF, máx 2MB",
-      "invalidImageType": "Tipo de imagen inválido. Por favor sube un PNG, JPG o GIF",
-      "imageTooLarge": "La imagen es demasiado grande. El tamaño máximo es 2MB",
-      "name": "Nombre de la Empresa",
-      "namePlaceholder": "Introduce el nombre de la empresa",
-      "tradingName": "Nombre Comercial",
-      "tradingNamePlaceholder": "Introduce el nombre comercial",
-      "sector": "Sector",
-      "selectSector": "Selecciona un sector",
-      "subsector": "Subsector",
-      "selectSubsector": "Selecciona un subsector",
-      "country": "País",
-      "selectCountry": "Selecciona un país",
-      "foundedYear": "Año de Fundación",
-      "foundedYearPlaceholder": "AAAA",
-      "registrationId": "ID de Registro",
-      "registrationIdPlaceholder": "Introduce el ID de registro",
-      "website": "Sitio Web",
-      "websitePlaceholder": "https://ejemplo.com",
-      "description": "Descripción",
-      "descriptionPlaceholder": "Introduce la descripción de la empresa",
-      "createValuation": "Crear Valoración",
-      "editCompany": "Editar Empresa",
-      "saveChanges": "Guardar Cambios",
-      "cancelEdit": "Cancelar"
-    },
-    "create": {
-      "title": "Nueva Empresa",
-      "submit": "Crear Empresa",
-      "success": "Empresa creada",
-      "successMessage": "La empresa fue creada exitosamente",
-      "error": "Error creando empresa",
-      "errorMessage": "Hubo un error al crear la empresa"
-    }
   }
 }
